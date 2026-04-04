@@ -5,7 +5,8 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://ovidius-astro-theme.netlify.app',
+    site: 'https://alierkanimrek.github.io',
+    base: '/nk3',
     vite: {
         plugins: [tailwindcss()]
     },
