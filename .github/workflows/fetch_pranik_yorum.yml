@@ -1,0 +1,29 @@
+name: Fetch Apps Script Data
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # her 6 saatte bir
+  workflow_dispatch:  # manuel tetikleme için
+
+jobs:
+  fetch-and-commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch data from Apps Script
+        run: |
+          curl -L \
+            "https://script.google.com/macros/s/AKfycbyEvrCh6tZdwmpm3RiINA3DRibAqaQT2WTAqS285MsEor-gZX3tL6FIV1rgwVKeBobE/exec" \
+            -o public/pranik_yorum.bin
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/pranik_yorum.bin
+          git diff --staged --quiet || git commit -m "data: pranik_yorum.bin güncellendi"
+          git push
