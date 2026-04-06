@@ -6,16 +6,17 @@ import CustomImage from './CustomImage.astro';
 const primaryNavLinks = siteConfig.primaryNavLinks ?? [];
 
 const { class: className } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <header class:list={['flex items-center justify-between gap-6 px-4 py-4 sm:px-8 sm:py-6', className]}>
     {
         siteConfig.logo?.src ? (
-            <a href="/">
+            <a href={`${base}/`}>
                 <CustomImage class="max-h-12" {...siteConfig.logo} loading="eager" fetchpriority="high" />
             </a>
         ) : (
-            <a class="text-xl font-bold sm:text-2xl" href="/">
+            <a class="text-xl font-bold sm:text-2xl" href={`${base}/`}>
                 {siteConfig.title}
             </a>
         )
@@ -24,18 +25,18 @@ const { class: className } = Astro.props;
         primaryNavLinks.length > 0 && (
             <nav class="relative" aria-label="Primary navigation">
                 <button
-                    class="relative z-20 inline-flex items-center justify-center w-10 h-10 text-white transition-shadow duration-300 rounded-full cursor-pointer menu-toggle bg-primary hover:shadow-button"
+                    class="menu-toggle bg-primary hover:shadow-button relative z-20 inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-white transition-shadow duration-300"
                     aria-label="Open Menu"
                     aria-expanded="false"
                     aria-controls="menu-items"
                 >
-                    <span class="relative w-1 h-1 bg-white rounded-full menu-toggle-icon" />
+                    <span class="menu-toggle-icon relative h-1 w-1 rounded-full bg-white" />
                 </button>
-                <ul id="menu-items" class="absolute z-10 px-8 pt-16 pb-10 border menu -top-3 -right-3 border-white/40 bg-white/75 sm:px-12 sm:pt-20 sm:pb-16">
+                <ul id="menu-items" class="menu absolute -top-3 -right-3 z-10 border border-white/40 bg-white/75 px-8 pt-16 pb-10 sm:px-12 sm:pt-20 sm:pb-16">
                     {primaryNavLinks.map((link) => (
                         <li class="mb-1 border-b border-slate-200/70">
                             <HeaderNavLink
-                                class="relative block py-1 pr-6 text-lg font-bold transition duration-300 text-slate-700 hover:text-slate-500 sm:text-xl"
+                                class="relative block py-1 pr-6 text-lg font-bold text-slate-700 transition duration-300 hover:text-slate-500 sm:text-xl"
                                 href={link.href}
                             >
                                 {link.text}

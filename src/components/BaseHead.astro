@@ -1,10 +1,13 @@
 ---
 import figtreeWoff2 from '@fontsource-variable/figtree/files/figtree-latin-wght-normal.woff2?url';
 import { getImage } from 'astro:assets';
+
 import siteConfig from '../data/site-config';
 import type { ImageInput } from '../types';
 
 import '../styles/global.css';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 export type Props = {
     title?: string;
@@ -64,9 +67,9 @@ function formatCanonicalURL(url: string | URL) {
 <link rel="preload" as="font" type="font/woff2" href={figtreeWoff2} crossorigin="anonymous" />
 
 <!-- Low Priority Global Metadata -->
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="sitemap" href="/sitemap-index.xml" />
-<link rel="alternate" type="application/rss+xml" href="/rss.xml" title="RSS" />
+<link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
+<link rel="sitemap" href={`${base}/sitemap-index.xml`} />
+<link rel="alternate" type="application/rss+xml" href={`${base}/rss.xml`} title="RSS" />
 
 <!-- Page Metadata -->
 <link rel="canonical" href={formatCanonicalURL(canonicalURL)} />
