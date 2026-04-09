@@ -52,4 +52,43 @@ Pranik Şifa Yorumu Yaz
 - pranik-sifa-danismanligi.md
 - pranik-sifa-danismanligi_yorumlar.md
 
+# Veri Kaynakları
 
+## Pranik Blog
+
+Path
+: /public/pranik_blog.bin
+
+Format
+: gzipped json
+
+### Yapı
+
+``` json
+[{
+    "published": {"$t": ""},
+    "title": {"$t": ""},
+    "content": {"$t": ""},
+    "media$thumbnail": {"url": ""}
+ },...]
+```
+
+## Pranik Yorum
+
+Path
+: /public/pranik_yorum.bin
+
+Format
+: gzipped json
+
+### Yapı
+
+``` json
+[{
+    "Zaman damgası": "2020-04-24T12:34:22.856Z",
+    "Uygulama Kime Yapıldı": "",
+    "Uygulamanın Sonuçlarına Puan Verin": "",
+    "Ne Tür Bir Rahatsızlık için Uygulandı": "",
+    "Danışmanlığı Değerlendirin": ""
+ },...]
+ ```
