@@ -17,7 +17,7 @@ jobs:
       - name: Fetch blog posts
         run: |
           curl -L \
-            "https://antalyapraniksifa.blogspot.com/feeds/posts/default?alt=json&max-results=500&published-min=2020-01-01T00:00:00&orderby=published" \
+            "https://script.google.com/macros/s/AKfycbyc91JOD9699twF-wixEymXy4l4DVsk6jWVQqssVQ9OnJ06K_MCZdvuhdN7bN2K7oxU/exec" \
             | gzip > public/pranik_blog.bin
 
       - name: Commit and push if changed

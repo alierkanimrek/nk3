@@ -50,5 +50,6 @@ Pranik Şifa Yorumu Yaz
 
 - index.md
 - pranik-sifa-danismanligi.md
+- pranik-sifa-danismanligi_yorumlar.md
 
 

@@ -38,9 +38,9 @@ Prana (Yaşam Enerjisi) çalışmasında fiziksel temas, hareket, ilaç, alet vs
 
 Danışmanlık alanlar ne diyor?
 
-`Danışan yorumlarından 3 tanesinin ilk 32 kelimesi kısaltılarak yerleştirilecek`
+`Danışan yorumlarından 3 tanesinin ilk 32 kelimesi kısaltılarak kart tasarımında yerleştirilecek`
 
-`Bölümün altına iki tane button ekle, "Tüm yorumları Oku" ve "Yorum yaz" bağlantıları eklenecek.`
+`Bölümün altına iki tane button ekle, "Tüm yorumları Oku" (pranik-sifa-danismanligi/yorumlar) ve dış bağlantı "Yorum yaz" (Pranik Şifa Yorumu Yaz) bağlantıları eklenecek.`
 
 #### İletişim
 
@@ -51,9 +51,9 @@ Seans için iletişime geçin
 
 ```
 Whatsapp, Instagram ve Mail bağlantılarını button olarak ekle, 
-Button etiketleri: Whatsapp'tan ekle, Instagram'dan katıl, E-posta yaz
+Button etiketleri: "Whatsapp'tan ekle", "Instagram'dan katıl", "E-posta yaz"
 ```
 
 ### Blog Yazıları
 
-`Blog sayfasından 3 tane yazının başlık ve resmi yerleştirilecek`
+`Blog sayfasından 3 tane yazının başlık ve resmi kart olarak yerleştirilecek`
