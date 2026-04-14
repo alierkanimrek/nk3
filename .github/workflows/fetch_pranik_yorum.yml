@@ -17,8 +17,8 @@ jobs:
       - name: Fetch data from Apps Script
         run: |
           curl -L \
-            "https://script.google.com/macros/s/AKfycbxKj3n_tXzB4WQoLNtSvk0EfaLlx1HWKYKJpHP4ghQ_YxXxNqBafN-7k8vww-B-7_s_/exec" \
-            | gzip > public/pranik_yorum.bin
+            "https://script.google.com/macros/s/AKfycbzxTgB1ynXhpPxbEMLceMVjNEXSb92rfF2KJAYFx8Rji2o0dx7emPq1jctagtin5fU-/exec" \
+            | gzip > src/data/pranik_yorum.bin
 
       - name: Commit and push if changed
         run: |

@@ -18,7 +18,7 @@ jobs:
         run: |
           curl -L \
             "https://script.google.com/macros/s/AKfycbyc91JOD9699twF-wixEymXy4l4DVsk6jWVQqssVQ9OnJ06K_MCZdvuhdN7bN2K7oxU/exec" \
-            | gzip > public/pranik_blog.bin
+            | gzip > src/data/pranik_blog.bin
 
       - name: Commit and push if changed
         run: |
