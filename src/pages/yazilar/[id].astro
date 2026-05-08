@@ -1,60 +1,39 @@
 ---
-import { type CollectionEntry, getCollection, render } from 'astro:content';
-import CustomImage from '../../components/CustomImage.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
-import ReadNextPostPreview from '../../components/ReadNextPostPreview.astro';
 import Subscribe from '../../components/Subscribe.astro';
+import { pranikBlog } from '../../data/site-content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { sortPostsByDateDesc } from '../../utils/post-utils';
+import type { ImageInput, PranikBlog } from '../../types';
+import { getFirstImgSrc, toUrlId } from '../../utils/post-utils';
 
 export async function getStaticPaths() {
-    const posts = (await getCollection('blog')).sort(sortPostsByDateDesc);
-    const postCount = posts.length;
-    return posts.map((post, index) => ({
-        params: { id: post.id },
+    return pranikBlog.map((post, index) => ({
+        params: { id: toUrlId(post.title.$t) },
         props: {
             post,
-            prevPost: index + 1 !== postCount ? posts[index + 1] : null,
-            nextPost: index !== 0 ? posts[index - 1] : null
+            prevPost: index + 1 !== pranikBlog.length ? pranikBlog[index + 1] : null,
+            nextPost: index !== 0 ? pranikBlog[index - 1] : null
         }
     }));
 }
 
-console.log('id');
-
 const { href } = Astro.url;
-const { post, prevPost, nextPost } = Astro.props as { post: CollectionEntry<'blog'>; prevPost: CollectionEntry<'blog'>; nextPost: CollectionEntry<'blog'> };
-const { title, publishDate, updatedDate, featureImage, excerpt, isFeatured, seo } = post.data;
-const { Content } = await render(post);
+const { post, prevPost, nextPost } = Astro.props as { post: PranikBlog; prevPost: PranikBlog | null; nextPost: PranikBlog | null };
+const imageSrc = getFirstImgSrc(post.content.$t);
+const featureImage: ImageInput | null = imageSrc ? { src: imageSrc, alt: post.title.$t } : null;
+const title = post.title.$t;
+const publishDate = new Date(post.published.$t);
 ---
 
-<BaseLayout title={seo?.title ?? title} description={seo?.description ?? excerpt} image={seo?.image ?? featureImage} pageType="article">
+<BaseLayout title={post.title.$t} image={featureImage!} pageType="article">
     <main class="grow px-4 py-12 sm:px-8 sm:py-16">
         <article class="mx-auto mb-12 max-w-6xl sm:mb-16">
             <header class="mx-auto mb-6 max-w-3xl sm:mb-8">
                 <div class="mb-3 text-sm tracking-wider text-slate-500 uppercase">
-                    {
-                        isFeatured && (
-                            <>
-                                <span class="text-primary">Featured</span>
-                                {' / '}
-                            </>
-                        )
-                    }
                     <FormattedDate date={publishDate} />
-                    {
-                        updatedDate && (
-                            <>
-                                {' '}
-                                <span>
-                                    (Updated on <FormattedDate date={updatedDate} />)
-                                </span>
-                            </>
-                        )
-                    }
                 </div>
                 <h1 class="text-3xl font-bold text-slate-900 sm:text-4xl md:text-5xl">{title}</h1>
-            </header>
+            </header><!--
             {
                 featureImage?.src && (
                     <figure class="my-6 sm:my-8 lg:my-12">
@@ -64,14 +43,11 @@ const { Content } = await render(post);
                             widths={[480, 640, 768, 960, 1200, 1600]}
                             sizes="(min-width: 1216px) 1152px, calc(100vw - 32px)"
                         />
-                        {featureImage.caption && <figcaption class="mt-1.5 text-xs sm:text-sm">{featureImage.caption}</figcaption>}
                     </figure>
                 )
-            }
+            }-->
             <div class="mx-auto max-w-3xl">
-                <div class="prose prose-slate sm:prose-lg max-w-none">
-                    <Content />
-                </div>
+                <div class="prose prose-slate sm:prose-lg max-w-none" set:html={post.content.$t} />
                 <div class="mt-8 flex flex-wrap gap-x-3 gap-y-1 text-sm sm:mt-12 sm:text-base">
                     <span class="font-semibold">Share:</span>
                     <a
@@ -104,7 +80,7 @@ const { Content } = await render(post);
                     >
                 </div>
             </div>
-        </article>
+        </article><!--
         {
             (prevPost || nextPost) && (
                 <div class="mx-auto mb-12 max-w-3xl sm:mb-16">
@@ -115,7 +91,7 @@ const { Content } = await render(post);
                     {prevPost && <ReadNextPostPreview post={prevPost} />}
                 </div>
             )
-        }
+        }-->
         <Subscribe class="mt-16 mb-12 sm:mt-24 sm:mb-16" />
     </main>
 </BaseLayout>

@@ -1,0 +1,30 @@
+---
+import BlogPreview from '../components/BlogPreview.astro';
+import Header from '../components/Header.astro';
+import PageHero from '../components/PageHero.astro';
+import siteContent, { pranikBlog } from '../data/site-content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const { title, desc, navTitle, navText } = siteContent.yazilar;
+---
+
+<BaseLayout title={title} description={desc}>
+    <div class="relative border-b border-slate-100 bg-slate-50" slot="header">
+        <Header class="relative" />
+        <PageHero {...siteContent.yazilar.hero} />
+    </div>
+
+    <section class="grow px-4 py-12 sm:px-8 sm:py-8">
+        <div class="px-4 sm:px-8">
+            {
+                pranikBlog?.length > 0 && (
+                    <>
+                        <BlogPreview blog={pranikBlog} />{' '}
+                    </>
+                )
+            }
+        </div>
+    </section>
+</BaseLayout>

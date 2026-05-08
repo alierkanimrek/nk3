@@ -1,0 +1,52 @@
+---
+import { getEntry, render } from 'astro:content';
+import Header from '../components/Header.astro';
+import NumerolojiYorumPreviewCard from '../components/NumerolojiYorumPreviewCard.astro';
+import PageHero from '../components/PageHero.astro';
+import Subscribe from '../components/Subscribe.astro';
+import siteConfig from '../data/site-config';
+import siteContent, { numerolojiYorum } from '../data/site-content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import type { NumerolojiYorum } from '../types';
+import { getRandomItems } from '../utils/post-utils';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const selectedNumerolojiYorum: NumerolojiYorum[] = getRandomItems(numerolojiYorum);
+
+const commentsPreview = siteConfig.commentsPreview;
+const { title, desc, navTitle, navText } = siteContent.numerolojiDanismanligi;
+
+const entry = await getEntry('info', 'numeroloji-danismanligi');
+const { Content } = await render(entry!);
+---
+
+<BaseLayout title={title} description={desc}>
+    <div class="relative border-b border-slate-100 bg-slate-50" slot="header">
+        <Header class="relative" />
+        <PageHero {...siteContent.numerolojiDanismanligi.hero} />
+    </div>
+    <section class="grow bg-slate-50 px-4 py-12 sm:px-8 sm:py-8">
+        <div class="px-4 sm:px-8">
+            {
+                selectedNumerolojiYorum?.length > 0 && (
+                    <>
+                        <NumerolojiYorumPreviewCard yorumlar={selectedNumerolojiYorum} />{' '}
+                    </>
+                )
+            }
+        </div>
+    </section>
+    <section class="grow px-4 py-12 sm:px-8 sm:py-8">
+        <article class="px-4 sm:px-8">
+            <div class="mx-auto max-w-3xl">
+                <div class="prose prose-slate sm:prose-lg max-w-none">
+                    <Content />
+                </div>
+            </div>
+        </article>
+    </section>
+    <section class="grow px-4 py-12 sm:px-8 sm:py-8">
+        <Subscribe title={navTitle} text={navText} whatsapp={true} instagram={true} email={true} />
+        <Subscribe title={siteContent.numerolojiYorumlari.navTitle} text={siteContent.numerolojiYorumlari.navText} numerolojiYorum={true} />-->
+    </section>
+</BaseLayout>

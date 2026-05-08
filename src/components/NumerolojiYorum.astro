@@ -1,0 +1,68 @@
+---
+import FormattedDate from '../components/FormattedDate.astro';
+import siteConfig from '../data/site-config';
+import siteContent from '../data/site-content';
+import type { NumerolojiYorum } from '../types';
+import { toUrlId } from '../utils/post-utils';
+
+interface Props {
+    yorum: NumerolojiYorum;
+}
+const { yorum } = Astro.props;
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const commentsPreview = siteConfig.commentsPreview;
+const { url } = siteContent.numerolojiYorumlari;
+---
+
+<article class="post-card mb-12 sm:mb-16">
+    <a id={toUrlId(yorum['Zaman damgası'])}></a>
+    <!-- <header class="post-card-header">
+        <div class="mb-2 text-sm tracking-wider text-slate-500 uppercase">
+            <FormattedDate date={new Date(yorum['Zaman damgası'])} />
+        </div>
+        <h2 class="text-3xl font-bold text-slate-900">{yorum['Rumuz veya İsim']}</h2>
+    </header>
+    <div class="post-card-content mt-4">
+        <div class="prose prose-slate sm:prose-lg max-w-none">{yorum['Danışmanlığı Değerlendirin']}</div>
+    </div>-->
+    <div class="yorum-kart">
+        <div class="yorum-header">
+            <div class="yorum-avatar">{yorum['Rumuz veya İsim']?.charAt(0)?.toUpperCase() || '?'}</div>
+            <div class="yorum-meta">
+                <div class="yorum-isim">{yorum['Rumuz veya İsim'] || 'Anonim'}</div>
+                <!-- <div class="yorum-rahatsizlik">{yorum['Ne Tür Bir Rahatsızlık için Uygulandı']}</div> -->
+                <div class="mb-2 text-sm tracking-wider text-slate-500 uppercase">
+                    <FormattedDate date={new Date(yorum['Zaman damgası'])} />
+                </div>
+            </div>
+        </div>
+        <p class="yorum-metin">
+            {yorum['Danışmanlığı değerlendirin']}
+        </p>
+    </div>
+</article>
+
+<style>
+    @reference "tailwindcss";
+
+    @media (min-width: 1280px) {
+        .post-card-header {
+            grid-area: header;
+        }
+        .post-card-content {
+            grid-area: content;
+        }
+        .post-card-thumbnail {
+            grid-area: thumbnail;
+        }
+        .post-card {
+            @apply grid gap-x-8;
+            grid-template-rows: min-content 1fr;
+            grid-template-columns: 1fr 768px 1fr;
+            grid-template-areas:
+                'thumbnail header'
+                'thumbnail content';
+        }
+    }
+</style>

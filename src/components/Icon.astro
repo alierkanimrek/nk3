@@ -5,12 +5,16 @@ import Bluesky from '../assets/icons/bluesky.svg';
 import CodePen from '../assets/icons/codepen.svg';
 import Dev from '../assets/icons/dev.svg';
 import Facebook from '../assets/icons/facebook.svg';
+import Form from '../assets/icons/form.svg';
 import GitHub from '../assets/icons/github.svg';
 import Instagram from '../assets/icons/instagram.svg';
 import LinkedIn from '../assets/icons/linkedin.svg';
+import Location from '../assets/icons/location.svg';
+import Mail from '../assets/icons/mail.svg';
 import Mastodon from '../assets/icons/mastodon.svg';
 import Medium from '../assets/icons/medium.svg';
 import Reddit from '../assets/icons/reddit.svg';
+import WhatsApp from '../assets/icons/whatsapp.svg';
 import X from '../assets/icons/x.svg';
 import YouTube from '../assets/icons/youtube.svg';
 
@@ -28,7 +32,11 @@ const iconMap: { [key: string]: any } = {
     medium: Medium,
     reddit: Reddit,
     x: X,
-    youtube: YouTube
+    youtube: YouTube,
+    whatsapp: WhatsApp,
+    mail: Mail,
+    form: Form,
+    location: Location
 };
 
 type Props = {
@@ -42,5 +50,3 @@ const IconComponent = iconMap[icon];
 ---
 
 {IconComponent && <IconComponent class={className} />}
-
-

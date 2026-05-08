@@ -1,0 +1,66 @@
+---
+import { getEntry, render } from 'astro:content';
+import BlogPreview from '../components/BlogPreview.astro';
+import Header from '../components/Header.astro';
+import PageHero from '../components/PageHero.astro';
+import PranikYorumPreviewCard from '../components/PranikYorumPreviewCard.astro';
+import Subscribe from '../components/Subscribe.astro';
+import siteConfig from '../data/site-config';
+import siteContent, { pranikBlog, pranikYorum } from '../data/site-content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import type { PranikBlog, PranikYorum } from '../types';
+import { getRandomItems } from '../utils/post-utils.ts';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const selectedPranikYorum: PranikYorum[] = getRandomItems(pranikYorum);
+const selectedPranikBlog: PranikBlog[] = getRandomItems(pranikBlog);
+
+const commentsPreview = siteConfig.commentsPreview;
+const { title, desc, navTitle, navText } = siteContent.pranikSifaDanismanligi;
+
+const entry = await getEntry('info', 'pranik-sifa-danismanligi');
+const { Content } = await render(entry!);
+---
+
+<BaseLayout title={title} description={desc}>
+    <div class="relative border-b border-slate-100 bg-slate-50" slot="header">
+        <Header class="relative" />
+        <PageHero {...siteContent.pranikSifaDanismanligi.hero} />
+    </div>
+    <section class="grow bg-slate-50 px-4 py-12 sm:px-8 sm:py-8">
+        <div class="px-4 sm:px-8">
+            {
+                selectedPranikYorum?.length > 0 && (
+                    <>
+                        <PranikYorumPreviewCard yorumlar={selectedPranikYorum} />{' '}
+                    </>
+                )
+            }
+        </div>
+    </section>
+    <section class="grow px-4 py-12 sm:px-8 sm:py-8">
+        <article class="px-4 sm:px-8">
+            <div class="mx-auto max-w-3xl">
+                <div class="prose prose-slate sm:prose-lg max-w-none">
+                    <Content />
+                </div>
+            </div>
+        </article>
+    </section>
+    <section class="grow px-4 py-12 sm:px-8 sm:py-8">
+        <Subscribe title={navTitle} text={navText} whatsapp={true} instagram={true} email={true} />
+        <Subscribe title={siteContent.pranikSifaYorumlari.navTitle} text={siteContent.pranikSifaYorumlari.navText} pranikYorum={true} />
+    </section>
+
+    <section class="grow px-4 py-12 sm:px-8 sm:py-8">
+        <div class="px-4 sm:px-8">
+            {
+                selectedPranikBlog?.length > 0 && (
+                    <>
+                        <BlogPreview blog={selectedPranikBlog} />{' '}
+                    </>
+                )
+            }
+        </div>
+    </section>
+</BaseLayout>

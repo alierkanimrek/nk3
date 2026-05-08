@@ -1,18 +1,25 @@
 ---
 import { getCollection } from 'astro:content';
-import FeaturedPostPreview from '../components/FeaturedPostPreview.astro';
+import CustomImage from '../components/CustomImage.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
-import PostPreview from '../components/PostPreview.astro';
+import ServicePreview from '../components/ServicePreview.astro';
 import Subscribe from '../components/Subscribe.astro';
 import siteConfig from '../data/site-config';
+import siteContent, { numerolojiYorum, pranikBlog, pranikYorum } from '../data/site-content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import type { NumerolojiYorum, PranikBlog, PranikYorum } from '../types';
 import { sortPostsByDateDesc } from '../utils/post-utils';
+import { getFirstImgSrc, getRandomItems, kisalt, stripHtmlTags, toUrlId } from '../utils/post-utils.ts';
 
 const posts = (await getCollection('blog')).sort(sortPostsByDateDesc);
 const featuredPosts = posts.filter(({ data }) => data.isFeatured);
 const latestPosts = posts.filter(({ data }) => !data.isFeatured).slice(0, 3);
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const selectedPranikYorum: PranikYorum[] = getRandomItems(pranikYorum, 1);
+const selectedPranikBlog: PranikBlog[] = getRandomItems(pranikBlog, 1);
+const selectedNumerolojiYorum: NumerolojiYorum[] = getRandomItems(numerolojiYorum, 1);
 ---
 
 <BaseLayout description={siteConfig.description}>
@@ -20,44 +27,91 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <Header class="relative" />
         <Hero {...siteConfig.hero} socialLinks={siteConfig.socialLinks} />
     </div>
-    <main class="grow py-12 sm:py-16">
-        {
-            featuredPosts?.length > 0 && (
-                <div class="mb-12 border-b border-slate-200 px-4 sm:mb-16 sm:px-8">
-                    <div class="mx-auto max-w-6xl">
-                        {featuredPosts.map((post) => (
-                            <FeaturedPostPreview post={post} />
-                        ))}
-                    </div>
+
+    <section class="grow bg-slate-50 px-4 py-12 sm:px-8 sm:py-8">
+        <div class="px-4 sm:px-8">
+            <div class="mx-auto max-w-3xl xl:max-w-6xl">
+                <div class="yorumlar-grid">
+                    {
+                        selectedPranikYorum?.length > 0 && (
+                            <div class="yorum-kart">
+                                <div class="yorum-header">
+                                    <div class="yorum-avatar">{selectedPranikYorum[0]['Rumuz veya İsim']?.charAt(0)?.toUpperCase() || '?'}</div>
+                                    <div class="yorum-meta">
+                                        <div class="yorum-isim">{selectedPranikYorum[0]['Rumuz veya İsim'] || 'Anonim'}</div>
+                                    </div>
+                                </div>
+                                <p class="yorum-metin">
+                                    {kisalt(selectedPranikYorum[0]['Danışmanlığı Değerlendirin'])}
+                                    <a
+                                        href={`${base}${siteContent.pranikSifaYorumlari.url}#${toUrlId(selectedPranikYorum[0]['Zaman damgası'])}`}
+                                        class="text-gray-950 underline decoration-sky-400 underline-offset-3 hover:decoration-2 dark:text-white"
+                                    >
+                                        {siteConfig.commentsPreview?.readMore}
+                                    </a>
+                                </p>
+                            </div>
+                        )
+                    }
+                    {
+                        numerolojiYorum?.length > 0 && (
+                            <div class="yorum-kart">
+                                <div class="yorum-header">
+                                    <div class="yorum-avatar">{selectedNumerolojiYorum[0]['Rumuz veya İsim']?.charAt(0)?.toUpperCase() || '?'}</div>
+                                    <div class="yorum-meta">
+                                        <div class="yorum-isim">{selectedNumerolojiYorum[0]['Rumuz veya İsim'] || 'Anonim'}</div>
+                                    </div>
+                                </div>
+                                <p class="yorum-metin">
+                                    {kisalt(selectedNumerolojiYorum[0]['Danışmanlığı değerlendirin'])}
+                                    <a
+                                        href={`${base}${siteContent.numerolojiYorumlari.url}#${toUrlId(selectedNumerolojiYorum[0]['Zaman damgası'])}`}
+                                        class="text-gray-950 underline decoration-sky-400 underline-offset-3 hover:decoration-2 dark:text-white"
+                                    >
+                                        {siteConfig.commentsPreview?.readMore}
+                                    </a>
+                                </p>
+                            </div>
+                        )
+                    }
+                    {
+                        selectedPranikBlog?.length > 0 && (
+                            <div class="yorum-kart">
+                                <a href={`${base}/yazilar/${toUrlId(selectedPranikBlog[0].title.$t)}`}>
+                                    <div class="yorum-header">
+                                        {getFirstImgSrc(selectedPranikBlog[0].content.$t) && (
+                                            <CustomImage
+                                                src={getFirstImgSrc(selectedPranikBlog[0].content.$t) || ''}
+                                                alt={selectedPranikBlog[0].title.$t}
+                                                class="yorum-avatar-buyuk w-full rounded-md"
+                                                widths={[160, 320, 480, 640, 768, 960, 1200]}
+                                                sizes="(min-width: 1280px) 160px, (min-width: 832px) 768px, calc(100vw - 32px)"
+                                            />
+                                        )}
+
+                                        <div class="yorum-meta">
+                                            <div class="yorum-isim">{selectedPranikBlog[0].title.$t}</div>
+                                        </div>
+                                    </div>
+                                    <p class="yorum-metin">
+                                        {kisalt(stripHtmlTags(selectedPranikBlog[0].content.$t), 30)}
+                                        <a
+                                            href={`${base}/yazilar/${toUrlId(selectedPranikBlog[0].title.$t)}`}
+                                            class="text-gray-950 underline decoration-sky-400 underline-offset-3 hover:decoration-2 dark:text-white"
+                                        >
+                                            {siteConfig.blogPreview?.readMore}
+                                        </a>
+                                    </p>
+                                </a>
+                            </div>
+                        )
+                    }
                 </div>
-            )
-        }
-        <div class="mb-12 px-4 sm:mb-16 sm:px-8">
-            {
-                latestPosts?.length > 0 && (
-                    <>
-                        <div class="mx-auto mb-8 max-w-3xl sm:mb-12">
-                            <h2 class="after:bg-primary text-sm tracking-wider text-slate-900 uppercase after:mt-4 after:block after:h-px after:w-16 after:content-['']">
-                                Latest Articles
-                            </h2>
-                        </div>
-                        <div class="mx-auto max-w-3xl xl:max-w-6xl">
-                            {latestPosts.map((post) => (
-                                <PostPreview post={post} />
-                            ))}
-                        </div>
-                        <div class="mx-auto max-w-3xl border-t border-slate-200 pt-8 sm:pt-12">
-                            <a
-                                class="bg-primary hover:shadow-button inline-flex items-center justify-center gap-1.5 rounded-full px-8 py-2.5 font-semibold text-white transition duration-300"
-                                href={`${base}/blog`}
-                            >
-                                View All Posts
-                            </a>
-                        </div>
-                    </>
-                )
-            }
-            <Subscribe class="mt-12 sm:mt-16" />
+            </div>
         </div>
-    </main>
+    </section>
+    <section class="grow bg-slate-50 px-4 py-12 sm:px-8 sm:py-8">
+        <ServicePreview />
+        <Subscribe class="mt-12 sm:mt-16" instagram={true} email={true} />
+    </section>
 </BaseLayout>

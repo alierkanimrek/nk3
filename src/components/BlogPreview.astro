@@ -1,0 +1,63 @@
+---
+import siteConfig from '../data/site-config';
+import { type PranikBlog } from '../types.ts';
+import { kisalt, stripHtmlTags, toUrlId } from '../utils/post-utils';
+import { getFirstImgSrc } from '../utils/post-utils.ts';
+import CustomImage from './CustomImage.astro';
+
+interface Props {
+    blog: PranikBlog[];
+}
+const { blog } = Astro.props;
+
+//const title = post.title.$t;
+//const publishDate = new Date(post.published.$t);
+//const content = kisalt(stripHtmlTags(post.content.$t), 30);
+//const thumbnail = post.media$thumbnail && post.media$thumbnail.url;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+//const url = `${base}/blog/${toUrlId(title)}/`;
+//console.log(blog[0]);console.log(blog[1]);console.log(blog[2]);
+
+---
+
+<div class="mx-auto mb-8 max-w-3xl items-center text-center">
+    <h2 class="after:bg-primary text-2xl font-bold text-slate-900 sm:text-3xl">
+        {siteConfig.blogPreview?.title}
+    </h2>
+</div>
+
+<div class="mx-auto max-w-3xl xl:max-w-6xl">
+    <div class="yorumlar-grid">
+    
+    {
+        blog.map((blog) => (
+            <div class="yorum-kart">
+                <a href={`${base}/yazilar/${toUrlId(blog.title.$t)}`}>
+                <div class="yorum-header">
+                    
+                    {getFirstImgSrc(blog.content.$t) && (
+                        <CustomImage
+                        src={getFirstImgSrc(blog.content.$t) || ''}
+                        alt={blog.title.$t}
+                        class="yorum-avatar-buyuk w-full rounded-md"
+                        widths={[160, 320, 480, 640, 768, 960, 1200]}
+                        sizes="(min-width: 1280px) 160px, (min-width: 832px) 768px, calc(100vw - 32px)"
+                    />)}
+
+                    <div class="yorum-meta">
+                        <div class="yorum-isim">{blog.title.$t}</div>
+                        <!-- <div class="yorum-rahatsizlik">{yorum['Ne Tür Bir Rahatsızlık için Uygulandı']}</div> -->
+                    </div>
+                </div>
+                <p class="yorum-metin">
+                    {kisalt(stripHtmlTags(blog.content.$t), 30)}
+                    <a href={`${base}/yazilar/${toUrlId(blog.title.$t)}`} class="text-gray-950 underline decoration-sky-400 underline-offset-3 hover:decoration-2 dark:text-white">{siteConfig.blogPreview?.readMore}</a>
+                </p>
+                </a>
+            </div>
+        ))
+    }
+</div>
+
+</div>
+

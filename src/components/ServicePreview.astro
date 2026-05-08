@@ -1,0 +1,161 @@
+---
+interface Sorun {
+    soru: string;
+    durumlar: string[];
+    cozum: string;
+    aciklama: string;
+    gorselId: string;
+    href: string;
+}
+
+const sorunlar: Sorun[] = [
+    {
+        soru: "Bedensel veya psikolojik bir sorunla mı boğuşuyorsunuz?",
+        durumlar: [
+            "Kronik ağrı veya hastalık",
+            "Stres, kaygı, panik ataklar",
+            "Nedeni bilinemeyen yorgunluk",
+            "İlaçların yetersiz kaldığı durumlar"
+        ],
+        cozum: "Pranik Şifa Danışmanlığı",
+        aciklama: "Bedenin eterik enerji alanında çalışarak fiziksel ve psikolojik iyileşmeyi destekler. Modern tıpla birlikte uygulanabilir; temas, ilaç veya alet kullanılmaz. Uzaktan veya yüzyüze seans seçeneği mevcuttur.",
+        gorselId: "index-image-1.png",
+        href: "/pranik-sifa-danismanligi"
+    },
+    {
+        soru: "Aile içi çatışmalar veya ilişki sorunları mı yaşıyorsunuz?",
+        durumlar: [
+            "Sürekli tekrarlayan aile kavgaları",
+            "Ebeveyn-çocuk iletişim kopukluğu",
+            "Boşanma süreci veya sonrası",
+            "Eş veya partner ile anlaşmazlıklar"
+        ],
+        cozum: "Aile Danışmanlığı",
+        aciklama: "Aile bireylerinin birbirleriyle olan ilişkilerindeki örüntüleri ve çatışma noktalarını güvenli bir ortamda ele alır. Hem bireysel hem de aile olarak katılım mümkündür; enerjetik ve duygusal destek bir arada sunulur.",
+        gorselId: "index-image-2.png",
+        href: "/aile-danismanligi"
+    },
+    {
+        soru: "Yaşamınızda anlam veremediğiniz tekrarlayan örüntüler mi var?",
+        durumlar: [
+            "Sürekli aynı sorunlara takılı kalmak",
+            "İlişkilerde tekrar eden kırılma noktaları",
+            "Neden olduğunu anlamadığınız başlangıç ve bitişler",
+            "Geçmiş ve geleceğe dair belirsizlik"
+        ],
+        cozum: "Numeroloji Danışmanlığı",
+        aciklama: "Doğum tarihi ve isim analiziyle yaşamın gizli örüntüleri okunur. Tekrar eden konuları çözümlemek, kişisel potansiyeli keşfetmek ve geçmiş-geleceğe yüksek bir farkındalıkla bakabilmek için size özel sayı sembolleri yorumlanır.",
+        gorselId: "index-image-3.png",
+        href: "/numeroloji-danismanligi"
+    },
+    {
+        soru: "İç huzur bulamıyor, kendinizi tükenmiş mi hissediyorsunuz?",
+        durumlar: [
+            "Zihin durdurulamayan düşüncelerle meşgul",
+            "Duygusal tükenme ve anlam kaybı",
+            "Sevgi ve şefkat eksikliği hissi",
+            "Manevi bağlantı kuramamak"
+        ],
+        cozum: "İkiz Kalpler Meditasyonu",
+        aciklama: "Kalp ve taç çakralarını aynı anda aktive eden bu meditasyon, derin bir iç huzur ve sevgi enerjisi yaratır. Düzenli uygulamayla stres azalır, zihin berraklaşır ve manevi farkındalık gelişir. Seans sırasında rehberli olarak uygulanabilir.",
+        gorselId: "index-image-4.png",
+        href: "/ikiz-kalpler-meditasyonu"
+    },
+    {
+        soru: "Kendinizi veya çevrenizi iyileştirebilmek ister misiniz?",
+        durumlar: [
+            "Pranik şifayı bizzat öğrenmek istiyorum",
+            "Ailem veya sevdiklerim için kullanmak istiyorum",
+            "Profesyonel gelişim hedefliyorum",
+            "Manevi ilerleme arıyorum"
+        ],
+        cozum: "Pranik Şifa Eğitimi",
+        aciklama: "Temel düzeyden ileri uygulamalara kadar sertifikalı eğitim programları. Kendinizi, ailenizi ve başkalarını destekleyebilecek pratik teknikler öğrenin. Fiziksel temas gerektirmeyen bu sistem herkese öğretilebilir.",
+        gorselId: "index-image-5.png",
+        href: "/pranik-sifa-egitimi"
+    }
+];
+---
+
+<section class="py-20 bg-slate-50">
+    <div class="max-w-5xl mx-auto px-6 sm:px-8">
+
+        <!-- Başlık -->
+        <div class="max-w-xl mb-16">
+            <p class="text-xs font-semibold tracking-widest uppercase text-slate-400 mb-3">
+                Size nasıl yardımcı olabilirim?
+            </p>
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">
+                Aradığınız çözüm burada olabilir
+            </h2>
+            <p class="text-slate-500 leading-relaxed">
+                Hangi durumu yaşadığınıza göre size en uygun hizmeti bulabilirsiniz.
+            </p>
+        </div>
+
+        <!-- Sorun - Çözüm Satırları -->
+        <div class="flex flex-col gap-20">
+            {sorunlar.map((item, i) => (
+                <div class={`flex flex-col sm:flex-row items-start gap-10 ${i % 2 === 1 ? 'sm:flex-row-reverse' : ''}`}>
+
+                    <!-- Görsel -->
+                    <div class="w-full sm:w-2/5 shrink-0">
+                        <img
+                            src={`src/assets/images/${item.gorselId}`}
+                            alt={item.cozum}
+                            class="w-full rounded-xl object-cover aspect-[3/2]"
+                            loading="lazy"
+                        />
+                    </div>
+
+                    <!-- Metin -->
+                    <div class="flex-1 pt-1">
+
+                        <!-- Soru -->
+                        <p class="text-xl font-bold text-red-900 leading-snug mb-5">
+                            {item.soru}
+                        </p>
+
+                        <!-- Durumlar listesi -->
+                        <ul class="mb-4 space-y-2">
+                            {item.durumlar.map((durum) => (
+                                <li class="flex items-start gap-2 text-sm text-slate-500">
+                                    <span class="mt-1 shrink-0 w-4 h-4 rounded-full border border-slate-300 flex items-center justify-center">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-slate-400 block"></span>
+                                    </span>
+                                    {durum}
+                                </li>
+                            ))}
+                        </ul>
+
+                        <!-- Ayırıcı -->
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="h-px flex-1 bg-slate-200"></div>
+                            <span class="text-xs font-semibold tracking-widest uppercase text-slate-400">Çözüm</span>
+                            <div class="h-px flex-1 bg-slate-200"></div>
+                        </div>
+
+                        <!-- Çözüm başlık -->
+                        <!--<h3 class="text-lg font-bold text-slate-900 mb-3">{item.cozum}</h3>-->
+
+                        <!-- Açıklama -->
+                        <p class="text-sm text-slate-500 leading-relaxed mb-2">{item.cozum}; {item.aciklama}</p>
+
+                        <!-- CTA -->
+                        <a
+                            href={item.href}
+                            class="inline-flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-full bg-primary px-8 py-2.5 font-semibold text-white transition duration-300 hover:bg-green-600 sm:w-auto"
+                        >
+                            Evet
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+            ))}
+        </div>
+
+    </div>
+</section>

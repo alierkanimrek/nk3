@@ -32,9 +32,19 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             </div>
         )
     }
-    <p class="text-center text-xs tracking-wider text-slate-700 uppercase">
+    <p class="text-center text-xs tracking-wider text-slate-700">
+        <img
+            src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc.png"
+            alt="Creative Commons Atıf-GayriTicari 4.0 Uluslararası Lisansı"
+            class="mx-auto mb-1 h-7"
+        />
+        Bu sayfadaki içerik Creative Commons Atıf-GayriTicari 4.0 Uluslararası Lisansı ile lisanslanmıştır.
+    </p>
+    <br />
+    <p class="text-center text-[0.5rem] tracking-wider text-slate-700 uppercase">
         &copy; {currentYear}
-        <a class="text-primary underline hover:no-underline" href={`${base}/`}>{siteConfig.title}</a>. Created with Astro.js &
-        <a class="text-primary underline hover:no-underline" href="https://justgoodui.com/astro-themes/ovidius/"> Ovidius theme</a>.
+        <a class="text-primary underline hover:no-underline" href={`${base}/`}>{siteConfig.title}</a>.<br />
+        Created with Astro.js &<a class="text-primary underline hover:no-underline" href="https://justgoodui.com/astro-themes/ovidius/"> Ovidius theme</a> by
+        <a class="text-primary underline hover:no-underline" href="https://github.com/alierkanimrek/nk3"> CookieMonster</a>.
     </p>
 </footer>

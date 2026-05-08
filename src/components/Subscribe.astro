@@ -1,28 +1,146 @@
 ---
 import siteConfig from '../data/site-config';
+import Icon from './Icon.astro';
 
-type Props = { class?: string };
+type Props = {
+    class?: string;
+    title?: string;
+    text?: string;
+    whatsapp?: boolean;
+    instagram?: boolean;
+    email?: boolean;
+    pranikYorum?: boolean;
+    numerolojiYorum?: boolean;
+    pranikEgitimi?: boolean;
+    pranikEgitimYorumlari?: boolean;
+};
 
-const { class: className } = Astro.props;
+const {
+    class: className,
+    title,
+    text,
+    whatsapp = false,
+    instagram = false,
+    email = false,
+    pranikYorum = false,
+    numerolojiYorum = false,
+    pranikEgitimi = false,
+    pranikEgitimYorumlari = false
+} = Astro.props;
 const subscribe = siteConfig.subscribe;
-if (!subscribe?.enabled || !subscribe?.form?.action) {
+if (!subscribe?.enabled) {
     return;
 }
+const subtitle = title ?? subscribe.title;
+const subtext = text ?? subscribe.text;
 ---
 
-<section
+<div
     class:list={[
         'mx-auto flex w-full max-w-3xl flex-col items-center gap-4 rounded-md border border-slate-200 bg-slate-50 px-6 py-8 text-center sm:px-12 sm:py-14',
         className
     ]}
 >
-    {subscribe.title && <h2 class="max-w-xl text-2xl font-bold text-slate-900 sm:text-3xl">{subscribe.title}</h2>}
-    {subscribe.text && <p class="max-w-xl text-slate-700 sm:text-lg">{subscribe.text}</p>}
-    <form
+    {subtitle && <h2 class="max-w-xl text-2xl font-bold text-slate-900 sm:text-3xl">{subtitle}</h2>}
+    {subtext && <p class="max-w-xl text-slate-700 sm:text-lg">{subtext}</p>}
+    <div class="flex flex-col items-center gap-3 sm:flex-row sm:gap-4">
+        {
+            whatsapp && subscribe.whatsapp && (
+                <a
+                    href={subscribe.whatsapp.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-full bg-[#25d366] px-8 py-2.5 font-semibold text-white transition duration-300 hover:bg-green-600 sm:w-auto"
+                >
+                    <Icon icon="whatsapp" class="h-5 w-5 overflow-visible fill-current" />
+                    {subscribe.whatsapp.label}
+                </a>
+            )
+        }
+        {
+            instagram && subscribe.instagram && (
+                <a
+                    href={subscribe.instagram.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-full bg-[#FF0069] px-8 py-2.5 font-semibold text-white transition duration-300 hover:bg-pink-600 sm:w-auto"
+                >
+                    <Icon icon="instagram" class="h-5 w-5 overflow-visible fill-current" />
+                    {subscribe.instagram.label}
+                </a>
+            )
+        }
+        {
+            email && subscribe.email && (
+                <a
+                    href={subscribe.email.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-full bg-[#4285F4] px-8 py-2.5 font-semibold text-white transition duration-300 hover:bg-blue-600 sm:w-auto"
+                >
+                    <Icon icon="mail" class="h-5 w-5 overflow-visible fill-current" />
+                    {subscribe.email.label}
+                </a>
+            )
+        }
+        {
+            pranikYorum && subscribe.pranikYorum && (
+                <a
+                    href={subscribe.pranikYorum.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-full bg-fuchsia-700 px-8 py-2.5 font-semibold text-white transition duration-300 hover:bg-fuchsia-500 sm:w-auto"
+                >
+                    <Icon icon="form" class="h-5 w-5 overflow-visible fill-current" />
+                    {subscribe.pranikYorum.label}
+                </a>
+            )
+        }
+        {
+            numerolojiYorum && subscribe.numerolojiYorum && (
+                <a
+                    href={subscribe.numerolojiYorum.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-full bg-fuchsia-700 px-8 py-2.5 font-semibold text-white transition duration-300 hover:bg-fuchsia-500 sm:w-auto"
+                >
+                    <Icon icon="form" class="h-5 w-5 overflow-visible fill-current" />
+                    {subscribe.numerolojiYorum.label}
+                </a>
+            )
+        }
+        {
+            pranikEgitimi && subscribe.pranikEgitimi && (
+                <a
+                    href={subscribe.pranikEgitimi.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-full bg-green-500 px-8 py-2.5 font-semibold text-white transition duration-300 hover:bg-green-600 sm:w-auto"
+                >
+                    <Icon icon="location" class="h-5 w-5 overflow-visible fill-current" />
+                    {subscribe.pranikEgitimi.label}
+                </a>
+            )
+        }
+        {
+            pranikEgitimYorumlari && subscribe.pranikEgitimYorumlari && (
+                <a
+                    href={subscribe.pranikEgitimYorumlari.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-full bg-blue-500 px-8 py-2.5 font-semibold text-white transition duration-300 hover:bg-blue-600 sm:w-auto"
+                >
+                    <Icon icon="form" class="h-5 w-5 overflow-visible fill-current" />
+                    {subscribe.pranikEgitimYorumlari.label}
+                </a>
+            )
+        }
+
+        <!--<form
         action={subscribe.form.action}
         method="post"
         name="subscribe-form"
-        class:list={['flex w-full max-w-xl flex-col gap-2.5 sm:flex-row', { 'mt-4': subscribe.title || subscribe.text }]}
+        class:list={['flex w-full max-w-xl flex-col gap-2.5 sm:flex-row', { 'mt-4': subtitle || subtext }]}
         target="_blank"
     >
         <input
@@ -48,7 +166,6 @@ if (!subscribe?.enabled || !subscribe?.form?.action) {
         >
             Subscribe
         </button>
-    </form>
-</section>
-
-
+    </form>-->
+    </div>
+</div>

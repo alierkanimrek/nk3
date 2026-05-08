@@ -1,49 +1,47 @@
 ---
-title: Terms of Service
+title: Hizmet Şartları
 ---
 
-**Last updated on June 1, 2023**
+Bu Hizmet Şartları nuraykaya.com sitesi tarafından sağlanan ilgili hizmetlere erişiminizi ve kullanımınızı düzenler. Web Sitesini kullanmadan önce lütfen bu Şartları dikkatlice okuyun.
 
-These Terms of Service ("Terms") govern your access to and use of [Website Name] ("the Website") and any related services provided by [Website Owner/Company] ("we," "us," or "our"). Please read these Terms carefully before using the Website.
+**1. Şartların Kabulü**
 
-**1. Acceptance of Terms**
+Web Sitesine erişerek veya kullanarak, bu Şartlara ve Gizlilik Politikamıza bağlı kalmayı kabul edersiniz. Bu Şartları veya Gizlilik Politikasını kabul etmiyorsanız, lütfen Web Sitesini kullanmayın.
 
-By accessing or using the Website, you agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms or the Privacy Policy, please do not use the Website.
+**2. Şartlarda Değişiklikler**
 
-**2. Changes to Terms**
+Bu Şartları herhangi bir zamanda değiştirme, düzeltme veya güncelleme hakkını saklı tutuyoruz. Bu değişiklikler Web Sitesinde yayınlandıktan sonra yürürlüğe girecektir. Bu Şartları düzenli olarak gözden geçirmek sizin sorumluluğunuzdadır. Herhangi bir değişiklikten sonra Web Sitesini kullanmaya devam etmeniz, revize edilmiş Şartları kabul ettiğinizi gösterir.
 
-We reserve the right to modify, amend, or update these Terms at any time. Such changes will be effective upon posting on the Website. It is your responsibility to review these Terms regularly. Your continued use of the Website after any changes indicates your acceptance of the revised Terms.
+**3. Web Sitesinin Kullanımı**
 
-**3. Use of the Website**
+Web sitesini yasal amaçlarla ve bu Şartlara uygun şekilde kullanmayı kabul edersiniz. Web sitesinde yayınladığınız veya gönderdiğiniz her türlü içerikten siz sorumlusunuz.
 
-You agree to use the Website for lawful purposes and in a manner consistent with these Terms. You are responsible for any content you post or submit on the Website.
+**4. Kayıt ve Hesap**
 
-**4. Registration and Account**
+Web sitesinin bazı alanları kayıt veya hesap oluşturmayı gerektirebilir. Kayıt işlemi sırasında doğru, güncel ve eksiksiz bilgiler sağlamayı ve bu bilgileri doğru, güncel ve eksiksiz tutmak için güncellemeyi kabul edersiniz. Hesap bilgilerinizin gizliliğini korumaktan ve hesabınız altında gerçekleşen tüm faaliyetlerden siz sorumlusunuz.
 
-Certain areas of the Website may require registration or the creation of an account. You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.
+**5. İçerik ve Fikri Mülkiyet**
 
-**5. Content and Intellectual Property**
+Web sitesindeki metin, grafikler, logolar, resimler, ses, video, yazılım ve diğer materyaller dahil olmak üzere içerik Creative Commons Atıf-GayriTicari 4.0 Uluslararası Lisansı ile lisanslanmıştır. 
 
-The content on the Website, including text, graphics, logos, images, audio, video, software, and other materials, is owned or licensed by us and is protected by copyright and other intellectual property laws. You may not use, reproduce, or distribute the content without our prior written consent.
+**6. Üçüncü Taraf Bağlantıları**
 
-**6. Third-Party Links**
+Web sitesi, üçüncü taraf web sitelerine veya kaynaklarına bağlantılar içerebilir. Üçüncü taraflarca sağlanan içerik, ürün veya hizmetleri onaylamıyoruz ve bunlardan sorumlu değiliz. Bu tür web sitelerini kullanmanız kendi sorumluluğunuzdadır.
 
-The Website may contain links to third-party websites or resources. We do not endorse and are not responsible for the content, products, or services provided by third parties. Your use of such websites is at your own risk.
+**7. Fesih**
 
-**7. Termination**
+Web sitesine erişiminizi, tamamen kendi takdirimize bağlı olarak, herhangi bir zamanda ve herhangi bir nedenle, bildirimde bulunmaksızın feshedebilir veya askıya alabiliriz.
 
-We may, at our sole discretion, terminate or suspend your access to the Website at any time and for any reason, without notice.
+**8. Sorumluluk Reddi**
 
-**8. Disclaimer**
+Web sitesi ve içeriği "olduğu gibi" ve "mevcut olduğu gibi" sağlanmaktadır. İçeriğin doğruluğu veya eksiksizliği konusunda hiçbir garanti veya beyanda bulunmuyoruz. Web sitesinin hatasız veya kesintisiz olacağını garanti etmiyoruz.
 
-The Website and its content are provided on an "as is" and "as available" basis. We make no warranties or representations about the accuracy or completeness of the content. We do not guarantee that the Website will be error-free or uninterrupted.
+**9. Sorumluluk Sınırlaması**
 
-**9. Limitation of Liability**
+Yasaların izin verdiği en geniş ölçüde, web sitesinin kullanımından veya kullanılamamasından kaynaklanan veya bununla bağlantılı olarak ortaya çıkan, kar kaybı, itibar kaybı, kullanım kaybı, veri kaybı veya diğer maddi olmayan kayıplar dahil ancak bunlarla sınırlı olmamak üzere, doğrudan, dolaylı, arızi, özel, sonuçsal veya örnek teşkil eden zararlardan sorumlu olmayacağız.
 
-To the fullest extent permitted by law, we shall not be liable for any direct, indirect, incidental, special, consequential, or exemplary damages, including but not limited to damages for loss of profits, goodwill, use, data, or other intangible losses, arising out of or in connection with the use or inability to use the Website.
+**10. Uygulanacak Hukuk**
 
-**10. Governing Law**
+Bu Şartlar, kanunlar ihtilafı prensipleri dikkate alınmaksızın, Türkiye kanunlarına göre yönetilir ve yorumlanır. Bu Şartlar kapsamında ortaya çıkan herhangi bir ihtilaf, Türkiye mahkemelerinin münhasır yargı yetkisine tabi olacaktır.
 
-These Terms are governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of laws principles. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts of [Your Jurisdiction].
-
-_Thank you for reading our Terms of Service. By using the Website, you agree to be bound by these Terms._
+_Hizmet Şartlarımızı okuduğunuz için teşekkür ederiz. Web sitesini kullanarak, bu Şartlara bağlı kalmayı kabul edersiniz._

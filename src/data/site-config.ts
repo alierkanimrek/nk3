@@ -1,83 +1,121 @@
 import heroAvatar from '../assets/images/avatar.jpg';
 import heroBackground from '../assets/images/hero.webp';
-import logoUrl from '../assets/images/logo.svg?url';
-import defaultSocial from '../assets/images/ovidius-preview.jpg';
+import logoUrl from '../assets/images/logo-black.png?url';
+//import defaultSocial from '../assets/images/ovidius-preview.jpg';
 import type { SiteConfig } from '../types';
+import siteContent from './site-content';
 
 const siteConfig: SiteConfig = {
     logo: {
         src: logoUrl,
-        alt: 'Ovidius logo'
+        alt: 'NK logo'
     },
-    title: 'Ovidius',
-    description: 'Astro.js and Tailwind CSS theme for blogging by justgoodui.com',
+    title: 'Nuray Kaya',
+    description: '',
     image: {
-        src: defaultSocial,
-        alt: 'Ovidius - Astro.js and Tailwind CSS theme'
+        src: heroAvatar,
+        alt: ''
     },
     primaryNavLinks: [
         {
-            text: 'Home',
+            text: 'Ana Sayfa',
             href: '/'
         },
         {
-            text: 'Blog',
-            href: '/blog'
+            text: siteContent.pranikSifaDanismanligi.title,
+            href: siteContent.pranikSifaDanismanligi.url
         },
         {
-            text: 'About',
-            href: '/about'
+            text: siteContent.pranikSifaYorumlari.title,
+            href: siteContent.pranikSifaYorumlari.url
         },
         {
-            text: 'Contact',
-            href: '/contact'
+            text: siteContent.numerolojiDanismanligi.title,
+            href: siteContent.numerolojiDanismanligi.url
         },
         {
-            text: 'Download Theme',
-            href: 'https://github.com/JustGoodUI/ovidius-astro-theme'
+            text: siteContent.numerolojiYorumlari.title,
+            href: siteContent.numerolojiYorumlari.url
+        },
+        {
+            text: siteContent.pranikSifaEgitimi.title,
+            href: siteContent.pranikSifaEgitimi.url
+        },
+        {
+            text: siteContent.ikizKalplerMeditasyonu.title,
+            href: siteContent.ikizKalplerMeditasyonu.url
+        },
+        {
+            text: siteContent.aileDanismanligi.title,
+            href: siteContent.aileDanismanligi.url
+        },
+        {
+            text: 'Yazılar',
+            href: '/yazilar'
+        },
+        {
+            text: 'Hakkımda',
+            href: '/hakkimda'
+        },
+        {
+            text: 'İletişim',
+            href: '/iletisim'
         }
     ],
     secondaryNavLinks: [
         {
-            text: 'About',
-            href: '/about'
+            text: 'Hakkımda',
+            href: '/hakkimda'
         },
         {
-            text: 'Terms of Service',
+            text: 'İletişim',
+            href: '/iletisim'
+        },        {
+            text: 'Kullanım Şartları',
             href: '/terms'
-        },
-        {
-            text: 'Contact',
-            href: '/contact'
-        },
-        {
-            text: 'Download Theme',
-            href: 'https://github.com/JustGoodUI/ovidius-astro-theme'
         }
+
     ],
     socialLinks: [
         {
-            text: 'Go to GitHub repo',
-            href: 'https://github.com/JustGoodUI/ovidius-astro-theme',
-            icon: 'github'
+            text: 'Whatsapp',
+            href: 'https://chat.whatsapp.com/HwfCyamphor4fF68jtPfOH',
+            icon: 'whatsapp'
         },
         {
-            text: 'Follow on Instagram',
-            href: 'https://instagram.com/',
+            text: 'Instagram',
+            href: 'https://instagram.com/pranic.arhat.yoga',
             icon: 'instagram'
         },
         {
-            text: 'Follow on Bluesky',
-            href: 'https://bsky.app/profile/justgoodui.com',
-            icon: 'bluesky'
+            text: 'Facebook',
+            href: 'https://facebook.com/turuncu64',
+            icon: 'facebook'
+        },
+        {
+            text: 'Youtube',
+            href: 'https://www.youtube.com/channel/UCqeqZ7VC4TXdDSaHB9gh2ow',
+            icon: 'youtube'
+        },
+        {
+            text: 'Mail',
+            href: 'mailto:nuraykaya1@gmail.com',
+            icon: 'mail'
+        },        {
+            text: 'Konum',
+            href: 'https://maps.app.goo.gl/wV3YE6R7yNsLnyQL9',
+            icon: 'location'
         }
+
+
+        
     ],
     hero: {
-        title: 'Hi there!',
-        text: "My name is Justin Case. I'm a freelance front-end developer, author and speaker based in Austin, TX. It's nice to meet you.",
+        title: 'Nuray Kaya',
+        text: "Aile Danışmanı, Pranik Şifa Eğitmeni, Numerolog",
         avatar: {
             src: heroAvatar,
-            alt: 'Justin Case'
+            alt: 'Nuray Kaya'
         },
         backgroundImage: {
             src: heroBackground
@@ -85,15 +123,37 @@ const siteConfig: SiteConfig = {
     },
     subscribe: {
         enabled: true,
-        title: 'Subscribe to Ovidius Newsletter',
-        text: 'One update per week. All the latest news directly in your inbox.',
+        title: 'İletişimde kalın',
+        text: '',
         form: {
-            action: 'https://justgoodthemes.us3.list-manage.com/subscribe/post?u=78f1bab16028354caeb23aecd&amp;id=4a7330d117&amp;f_id=005c48e2f0',
+            action: '',
             emailFieldName: 'EMAIL',
-            honeypotFieldName: 'b_78f1bab16028354caeb23aecd_4a7330d117'
-        }
+            honeypotFieldName: ''
+        },
+        whatsapp: { label: 'WhatsApp\'tan katıl', url: 'https://chat.whatsapp.com/HwfCyamphor4fF68jtPfOH' },
+        instagram: { label: 'Instagram\'dan yaz', url: 'https://instagram.com/pranic.arhat.yoga' },
+        email: { label: 'E-posta yaz', url: 'mailto:nuraykaya1@gmail.com' },
+        pranikYorum: { label: 'Formu doldur', url: 'https://forms.gle/zF9KWjv5ifGhzFji7' },
+        numerolojiYorum: { label: 'Formu doldur', url: 'https://forms.gle/LCLtopWJj71XCMPi9' },
+        pranikEgitimi: { label: 'En yakın eğitimi bulun', url: 'https://www.thepranichealers.com/sections/events/list.php?cmbSearchType=-&cmbSearchCourse=-&cmbSearchCountry=215&cmbSearchCity=-&cmbSearchCenter=-&txtSearchDateFrom=&txtSearchDateTo=' },
+        pranikEgitimYorumlari: { label: 'Yorumları okuyun', url: 'https://www.thepranichealers.com/sections/reviews/item.php?type=1&id=1' }
     },
+    commentsPreview: {
+        title: 'Danışmanlık alanlar ne diyor?',
+        readMore: 'Devamını oku',
+        readAll: 'Tüm yorumları gör'
+    },
+    blogPreview: {
+        title: 'Blog Yazıları',
+        readMore: 'Devamını oku',
+        readAll: 'Tüm yazıları gör'
+    },
+
     postsPerPage: 5
 };
 
+
+
 export default siteConfig;
+
+
