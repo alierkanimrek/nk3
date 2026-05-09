@@ -130,3 +130,7 @@ CARDS
     margin: 0;
     flex: 1;
 }
+
+:root {
+    color-scheme: light;
+}
