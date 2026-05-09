@@ -9,8 +9,7 @@ import siteConfig from '../data/site-config';
 import siteContent, { numerolojiYorum, pranikBlog, pranikYorum } from '../data/site-content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import type { NumerolojiYorum, PranikBlog, PranikYorum } from '../types';
-import { sortPostsByDateDesc } from '../utils/post-utils';
-import { getFirstImgSrc, getRandomItems, kisalt, stripHtmlTags, toUrlId } from '../utils/post-utils.ts';
+import { getFirstImgSrc, getRandomItems, kisalt, sortPostsByDateDesc, stripHtmlTags, toUrlId } from '../utils/post-utils';
 
 const posts = (await getCollection('blog')).sort(sortPostsByDateDesc);
 const featuredPosts = posts.filter(({ data }) => data.isFeatured);
@@ -45,7 +44,7 @@ const selectedNumerolojiYorum: NumerolojiYorum[] = getRandomItems(numerolojiYoru
                                     {kisalt(selectedPranikYorum[0]['Danışmanlığı Değerlendirin'])}
                                     <a
                                         href={`${base}${siteContent.pranikSifaYorumlari.url}#${toUrlId(selectedPranikYorum[0]['Zaman damgası'])}`}
-                                        class="text-gray-950 underline decoration-sky-400 underline-offset-3 hover:decoration-2 dark:text-white"
+                                        class="text-gray-950 underline decoration-sky-400 underline-offset-3 hover:decoration-2"
                                     >
                                         {siteConfig.commentsPreview?.readMore}
                                     </a>
@@ -66,7 +65,7 @@ const selectedNumerolojiYorum: NumerolojiYorum[] = getRandomItems(numerolojiYoru
                                     {kisalt(selectedNumerolojiYorum[0]['Danışmanlığı değerlendirin'])}
                                     <a
                                         href={`${base}${siteContent.numerolojiYorumlari.url}#${toUrlId(selectedNumerolojiYorum[0]['Zaman damgası'])}`}
-                                        class="text-gray-950 underline decoration-sky-400 underline-offset-3 hover:decoration-2 dark:text-white"
+                                        class="text-gray-950 underline decoration-sky-400 underline-offset-3 hover:decoration-2"
                                     >
                                         {siteConfig.commentsPreview?.readMore}
                                     </a>
@@ -97,7 +96,7 @@ const selectedNumerolojiYorum: NumerolojiYorum[] = getRandomItems(numerolojiYoru
                                         {kisalt(stripHtmlTags(selectedPranikBlog[0].content.$t), 30)}
                                         <a
                                             href={`${base}/yazilar/${toUrlId(selectedPranikBlog[0].title.$t)}`}
-                                            class="text-gray-950 underline decoration-sky-400 underline-offset-3 hover:decoration-2 dark:text-white"
+                                            class="text-gray-950 underline decoration-sky-400 underline-offset-3 hover:decoration-2"
                                         >
                                             {siteConfig.blogPreview?.readMore}
                                         </a>
