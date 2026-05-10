@@ -6,7 +6,7 @@ import { defineConfig, fontProviders } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
     site: 'https://alierkanimrek.github.io',
-    base: '/nk3',
+    base: '',
     vite: {
         plugins: [tailwindcss()]
     },
