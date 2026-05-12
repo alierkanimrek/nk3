@@ -18,12 +18,12 @@ jobs:
         run: |
           curl -L \
             "https://script.google.com/macros/s/AKfycbyc91JOD9699twF-wixEymXy4l4DVsk6jWVQqssVQ9OnJ06K_MCZdvuhdN7bN2K7oxU/exec" \
-            | gzip > src/data/pranik_blog.bin
+            | gzip > public/pranik_blog.bin
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/data/pranik_blog.bin
+          git add public/pranik_blog.bin
           git diff --staged --quiet || git commit -m "data: pranik_blog.bin güncellendi"
           git push

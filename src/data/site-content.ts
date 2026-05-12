@@ -171,17 +171,17 @@ let numerolojiYorum : NumerolojiYorum[] = [];
 let pranikBlog : PranikBlog[] = [];
 
 try {
-    pranikYorum = JSON.parse(gunzipSync(readFileSync(join(__dirname, '/pranik_yorum.bin').replace(/\/$/, ''))).toString());
+    pranikYorum = JSON.parse(gunzipSync(new Uint8Array(readFileSync(join(process.cwd(), 'public/pranik_yorum.bin').replace(/\/$/, '')))).toString());
 } catch (error) {    
     console.error('Pranik yorumları yüklenirken hata oluştu:', error);
 }
 try {
-    numerolojiYorum = JSON.parse(gunzipSync(readFileSync(join(__dirname, '/num_yorum.bin').replace(/\/$/, ''))).toString());
+    numerolojiYorum = JSON.parse(gunzipSync(new Uint8Array(readFileSync(join(process.cwd(), 'public/num_yorum.bin').replace(/\/$/, '')))).toString());
 } catch (error) {
     console.error('Numeroloji yorumları yüklenirken hata oluştu:', error);
 }
 try {
-    pranikBlog = JSON.parse(gunzipSync(readFileSync(join(__dirname, '/pranik_blog.bin').replace(/\/$/, ''))).toString());
+    pranikBlog = JSON.parse(gunzipSync(new Uint8Array(readFileSync(join(process.cwd(), 'public/pranik_blog.bin').replace(/\/$/, '')))).toString());
 } catch (error) {
     console.error('Pranik blog yazıları yüklenirken hata oluştu:', error);
 }

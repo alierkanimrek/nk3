@@ -51,7 +51,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                 </div>
                 <p class="yorum-metin">
                     {kisalt(stripHtmlTags(blog.content.$t), 30)}
-                    <a href={`${base}/yazilar/${toUrlId(blog.title.$t)}`} class="text-gray-950 underline decoration-sky-400 underline-offset-3 hover:decoration-2 dark:text-white">{siteConfig.blogPreview?.readMore}</a>
+                    <a href={`${base}/yazilar/${toUrlId(blog.title.$t)}`} class="text-gray-950 underline decoration-sky-400 underline-offset-3 hover:decoration-2">{siteConfig.blogPreview?.readMore}</a>
                 </p>
                 </a>
             </div>
