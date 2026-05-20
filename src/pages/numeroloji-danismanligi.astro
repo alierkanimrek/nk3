@@ -4,6 +4,8 @@ import Header from '../components/Header.astro';
 import NumerolojiYorumPreviewCard from '../components/NumerolojiYorumPreviewCard.astro';
 import PageHero from '../components/PageHero.astro';
 import Subscribe from '../components/Subscribe.astro';
+import Youtube from '../components/Youtube.astro';
+import { NumerolojiDanismanligiIframes } from '../data/externals';
 import siteConfig from '../data/site-config';
 import siteContent, { numerolojiYorum } from '../data/site-content';
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -35,6 +37,9 @@ const { Content } = await render(entry!);
                 )
             }
         </div>
+    </section>
+    <section class="grow px-4 py-12 sm:px-8 sm:py-8">
+        <Youtube frame={getRandomItems(NumerolojiDanismanligiIframes, 1)[0]} />
     </section>
     <section class="grow px-4 py-12 sm:px-8 sm:py-8">
         <article class="px-4 sm:px-8">

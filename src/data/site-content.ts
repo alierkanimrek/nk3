@@ -27,6 +27,24 @@ const siteContent: SiteContent = {
         },
         backgroundImage: {
             src: heroBackground
+        }}
+    },
+    pranikYuzGermeVucutSekillendirme:     {
+        url: '/pranik-yuz-germe-vucut-sekillendirme',
+        title: 'Pranik Yüz Germe ve Vücut Şekillendirme Danışmanlığı',
+        desc: 'Pranik Yüz Germe ve Vücut Şekillendirme seansları hakkında bilgiler. Reiki ve bioenerji gibi bir çalışmadır.',
+        heroTxt: '',
+        navTitle: 'Seans için iletişime geçin',
+        navText: 'İletişim bilgilerinizi yazarsanız, size dönüş yapacağım.',
+        hero: {
+            title: 'Pranik Yüz Germe ve Vücut Şekillendirme Danışmanlığı',
+            text: 'Cerrahi müdahaleler veya kozmetik ürünler kullanmadan, sadece enerji çalışmasıyla daha genç ve sağlıklı bir görünüm elde etmek mümkündür.',
+        avatar: {
+            src: heroAvatar,
+            alt: 'Nuray Kaya'
+        },
+        backgroundImage: {
+            src: heroBackground
         }
     }},
 
@@ -112,7 +130,7 @@ const siteContent: SiteContent = {
         desc: 'İkiz Kalpler Meditasyonu ve Arhatik Yoga hakkında bilgiler.',
         heroTxt: '',
         navTitle: 'Meditasyonda bize katılın',
-        navText: 'Her hafta ücretsiz online İkiz Kalpler Meditasyonu yapıyoruz. Katılmak Instagram\'dan duyuruları takip edin.',
+        navText: 'Her hafta ücretsiz online İkiz Kalpler Meditasyonu yapıyoruz. Katılmak için Instagram\'dan duyuruları takip edin.',
         hero: {
             title: 'İkiz Kalpler Meditasyonu',
             text: "Kalıcı değişimler içeriden dışarıya doğru gerçekleşir, değişmesi gereken şeyin kendiniz olduğunu kabul ettiğiniz anda her şey dönüşmeye başlar. Bu çalışma bir evi yıkıp yeniden inşa etmeye benzer ve önemli miktarda içsel enerji gerektirir.",

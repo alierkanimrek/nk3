@@ -8,6 +8,23 @@ export type Link = {
     text: string;
 };
 
+export type Iframe = {
+    src: string ;
+    category: Category;
+    allowRandom?: boolean;
+    width?: number | string;
+    height?: number | string;
+};
+
+export enum Category {
+  PranikSifaDanismanligi = 1,
+  PranikYuzGermeVucutSekillendirme = 6,
+  AileDanismanligi = 2,
+  IkizKalplerMeditasyonu = 3,
+  NumerolojiDanismanligi =4,
+  PranikSifaEgitimi = 5
+}
+
 export type SocialLink = Link & {
     icon: 'bluesky' | 'codepen' | 'dev' | 'facebook' | 'github' | 'instagram' | 'linkedin' | 'mastodon' | 'medium' | 'reddit' | 'x' | 'youtube' | 'whatsapp' | 'mail' | 'location';
 };
@@ -81,6 +98,7 @@ export type PageContent = {
 
 export type SiteContent = {
     pranikSifaDanismanligi: PageContent;
+    pranikYuzGermeVucutSekillendirme: PageContent;
     pranikSifaYorumlari: PageContent;
     numerolojiDanismanligi: PageContent;
     numerolojiYorumlari: PageContent;

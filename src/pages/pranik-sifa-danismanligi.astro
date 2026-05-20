@@ -5,6 +5,8 @@ import Header from '../components/Header.astro';
 import PageHero from '../components/PageHero.astro';
 import PranikYorumPreviewCard from '../components/PranikYorumPreviewCard.astro';
 import Subscribe from '../components/Subscribe.astro';
+import Youtube from '../components/Youtube.astro';
+import { PranikSifaDanismanligiIframes } from '../data/externals';
 import siteConfig from '../data/site-config';
 import siteContent, { pranikBlog, pranikYorum } from '../data/site-content';
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -38,6 +40,10 @@ const { Content } = await render(entry!);
             }
         </div>
     </section>
+    <section class="grow px-4 py-12 sm:px-8 sm:py-8">
+        <Youtube frame={getRandomItems(PranikSifaDanismanligiIframes, 1)[0]} />
+    </section>
+
     <section class="grow px-4 py-12 sm:px-8 sm:py-8">
         <article class="px-4 sm:px-8">
             <div class="mx-auto max-w-3xl">

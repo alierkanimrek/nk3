@@ -4,6 +4,8 @@ import BlogPreview from '../components/BlogPreview.astro';
 import Header from '../components/Header.astro';
 import PageHero from '../components/PageHero.astro';
 import Subscribe from '../components/Subscribe.astro';
+import Youtube from '../components/Youtube.astro';
+import { PranikSifaEgitimiIframes } from '../data/externals';
 import siteContent, { pranikBlog } from '../data/site-content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import type { PranikBlog } from '../types';
@@ -23,6 +25,10 @@ const { Content } = await render(entry!);
         <Header class="relative" />
         <PageHero {...siteContent.pranikSifaEgitimi.hero} />
     </div>
+    <section class="grow px-4 py-12 sm:px-8 sm:py-8">
+        <Youtube frame={getRandomItems(PranikSifaEgitimiIframes, 1)[0]} />
+    </section>
+
     <section class="grow px-4 py-12 sm:px-8 sm:py-8">
         <article class="px-4 sm:px-8">
             <div class="mx-auto max-w-3xl">

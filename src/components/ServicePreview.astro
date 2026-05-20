@@ -4,6 +4,8 @@ import Image2 from '../assets/images/index-image-2.png';
 import Image3 from '../assets/images/index-image-3.png';
 import Image4 from '../assets/images/index-image-4.png';
 import Image5 from '../assets/images/index-image-5.png';
+import Image6 from '../assets/images/index-image-6.png';
+
 import CustomImage from './CustomImage.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -26,7 +28,7 @@ const sorunlar: Sorun[] = [
             "İlaçların yetersiz kaldığı durumlar"
         ],
         cozum: "Pranik Şifa Danışmanlığı",
-        aciklama: "Bedenin eterik enerji alanında çalışarak fiziksel ve psikolojik iyileşmeyi destekler. Modern tıpla birlikte uygulanabilir; temas, ilaç veya alet kullanılmaz. Uzaktan veya yüzyüze seans seçeneği mevcuttur.",
+        aciklama: "Eterik enerji alanında yapılan bu çalışma bedenin kendini iyileştirme gücünü destekler, böylece tıbbi tedavilerden daha hızlı sonuç alınabilir. Fiziki temas, ilaç veya alet kullanılmaz. Uzaktan veya yüzyüze seans aynı ölçüde etkilidir.",
         gorselId: Image1,
         href: `${base}/pranik-sifa-danismanligi`
     },
@@ -39,7 +41,7 @@ const sorunlar: Sorun[] = [
             "Eş veya partner ile anlaşmazlıklar"
         ],
         cozum: "Aile Danışmanlığı",
-        aciklama: "Aile bireylerinin birbirleriyle olan ilişkilerindeki örüntüleri ve çatışma noktalarını güvenli bir ortamda ele alır. Hem bireysel hem de aile olarak katılım mümkündür; enerjetik ve duygusal destek bir arada sunulur.",
+        aciklama: "Aile bireylerinin birbirleriyle olan ilişkilerindeki örüntüleri ve çatışma noktalarını güvenli bir ortamda ele alır. Hem bireysel hem de aile olarak katılım mümkündür. Temel numerolojik analizler ve ileri pranik şifa teknikleriyle destekleyerek çok yönlü bir çözüm sunuyorum.",
         gorselId: Image2,
         href: `${base}/aile-danismanligi`
     },
@@ -52,7 +54,7 @@ const sorunlar: Sorun[] = [
             "Geçmiş ve geleceğe dair belirsizlik"
         ],
         cozum: "Numeroloji Danışmanlığı",
-        aciklama: "Doğum tarihi ve isim analiziyle yaşamın gizli örüntüleri okunur. Tekrar eden konuları çözümlemek, kişisel potansiyeli keşfetmek ve geçmiş-geleceğe yüksek bir farkındalıkla bakabilmek için size özel sayı sembolleri yorumlanır.",
+        aciklama: "Doğum tarihi ve isim analiziyle yaşamın gizli örüntüleri okunur. Tekrar eden konuları çözümlemek, kişisel potansiyeli keşfetmek ve geçmiş-geleceğe yüksek bir farkındalıkla bakabilmek için size özel sayı sembollerini yorumluyorum. Aile danışmanlığı ve pranik şifa teknikleriyle çözüme ulaşıyoruz.",
         gorselId: Image3,
         href: `${base}/numeroloji-danismanligi`
     },
@@ -65,9 +67,22 @@ const sorunlar: Sorun[] = [
             "Manevi bağlantı kuramamak"
         ],
         cozum: "İkiz Kalpler Meditasyonu",
-        aciklama: "Kalp ve taç çakralarını aynı anda aktive eden bu meditasyon, derin bir iç huzur ve sevgi enerjisi yaratır. Düzenli uygulamayla stres azalır, zihin berraklaşır ve manevi farkındalık gelişir. Seans sırasında rehberli olarak uygulanabilir.",
+        aciklama: "Kalp ve taç çakralarını aynı anda aktive eden bu meditasyon, derin bir iç huzur ve sevgi enerjisi yaratır. Düzenli uygulamayla stres azalır, zihin berraklaşır ve manevi farkındalık gelişir. Her hafta ücretsiz online ve yüz yüze meditasyonlar düzenliyorum.",
         gorselId: Image4,
         href: `${base}/ikiz-kalpler-meditasyonu`
+    },
+    {
+    "soru": "Zamanın ve stresin izlerini aynada görmekten yoruldunuz mu?",
+    "durumlar": [
+        "Ciltte sarkma, kırışıklıklar ve ince çizgiler",
+        "Yorgun, mat ve solgun bir yüz ifadesi",
+        "Diyet ve spora rağmen gitmeyen bölgesel fazlalıklar",
+        "Kimyasal ve cerrahi müdahalelerden çekinme durumu"
+    ],
+    "cozum": "Pranik Yüz Germe ve Vücut Şekillendirme",
+    "aciklama": "Enerji bedenindeki tıkanıklıkları temizleyip hücreleri taze enerjiyle besleyen bu çalışma, cildin ve dokuların doğal kolajen üretimini tetikler. Ameliyatsız, iğnesiz ve kimyasalsız bir gençleşme ve sıkılaşma sürecidir.",
+        gorselId: Image6,
+        href: `${base}/pranik-yuz-germe-vucut-sekillendirme`
     },
     {
         soru: "Kendinizi veya çevrenizi iyileştirebilmek ister misiniz?",
@@ -78,7 +93,7 @@ const sorunlar: Sorun[] = [
             "Manevi ilerleme arıyorum"
         ],
         cozum: "Pranik Şifa Eğitimi",
-        aciklama: "Temel düzeyden ileri uygulamalara kadar sertifikalı eğitim programları. Kendinizi, ailenizi ve başkalarını destekleyebilecek pratik teknikler öğrenin. Fiziksel temas gerektirmeyen bu sistem herkese öğretilebilir.",
+        aciklama: "Temel düzeyden ileri uygulamalara kadar sertifikalı eğitim programları ile kendinizi, ailenizi ve başkalarını destekleyebilecek pratik teknikler öğrenin. Fiziksel temas gerektirmeyen bu sistem herkese öğretilebilir.",
         gorselId: Image5,
         href: `${base}/pranik-sifa-egitimi`
     }
@@ -139,7 +154,7 @@ const sorunlar: Sorun[] = [
                         <!-- Ayırıcı -->
                         <div class="flex items-center gap-3 mb-2">
                             <div class="h-px flex-1 bg-slate-200"></div>
-                            <span class="text-xs font-semibold tracking-widest uppercase text-slate-400">Çözüm</span>
+                            <span class="text-xs font-semibold tracking-widest uppercase text-slate-400">Nasıl Yardımcı Olabilirim</span>
                             <div class="h-px flex-1 bg-slate-200"></div>
                         </div>
 

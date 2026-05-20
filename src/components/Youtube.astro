@@ -1,0 +1,27 @@
+---
+import type { Iframe } from '../types';
+
+type Props = {
+    class?: string;
+    frame: Iframe;
+};
+
+const { class: className, frame } = Astro.props;
+---
+
+<div
+    class:list={[
+        'mx-auto flex w-full max-w-3xl flex-col items-center gap-4 rounded-md border border-slate-200 bg-slate-50 px-6 py-8 text-center sm:px-12 sm:py-14',
+        className
+    ]}
+>
+    <iframe
+        width={frame.width || '100%'}
+        height={frame.height || '350'}
+        src={`https://www.youtube.com/embed/${frame.src}`}
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+</div>
