@@ -20,3 +20,26 @@ Temel Pranik Şifa kursu, yaşam enerjisini (Prana) kullanarak vücudun kendi ke
 - Uzaktan şifa
 
 Tüm bunlar Dünya Pranik Şifa Vakfı'nın 2 günlük uygulamalı seminerinde sunuluyor. Önceden hiçbir temel bilgiye veya yeteneğe sahip olmanıza gerek yoktur, doğru tekniklerle herkes enerjiyi ve etkilerini deneyimleyebiliyor.
+
+## Eğitimde neler sunuluyor?
+
+### Pranik Şifa İle Mucizeler Kitabı
+
+<img src="/src/assets/images/miracles-through-pranic-healing-book.jpg" alt="Açıklama" width="80%" style="margin-left: 30px; margin-bottom: 30px; border: 4px solid #ffffff; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" />
+
+Tüm katılımcılara Master Choa Kok Sui'nin [Pranik Şifa İle Mucizeler](https://www.amazon.com/Miracles-Through-Pranic-Healing-Practical/dp/B004BF802K) kitabının Dünya Pranik Şifa Vakfı tarafından basılmış <b>Türkçe çevirisi</b> verilmektedir.
+
+### Oneness Uygulaması
+
+<img src="/src/assets/images/oneness-app.webp" alt="Açıklama" width="200px" style="float: right; margin-left: 30px; margin-bottom: 30px; border: 4px solid #ffffff; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" />
+****
+Oneness uygulaması Dünya Pranik Şifa Vakfı'nın öğrencileri için hazırladığı bir mobil uygulamadır. Kurs kitapları ve meditasyon kayıtları yanında pek çok ezoterik kitap ve Master'lar tarafından verilmiş kursların kayıtları sunulmaktadır.
+
+- [Android için indir](https://play.google.com/store/apps/details?id=com.thepranichealers.app.depoly.oneness)
+- [Ios için indir](https://apps.apple.com/cy/app/oneness/id1639997157?l=tr)
+
+### Uluslararası sertifika
+
+Kursu tamamlayanlara uluslararası geçerli katılım sertifikası verilir, bu sertifika ile Türkiye dışında Dünya Pranik Şifa Vakfı tarafından sunulan ileri seviye kurslara katılabilirsiniz.
+
+<img src="/src/assets/images/basic-cert.jpg" alt="Açıklama" width="200px" style="margin-left: 30px; margin-bottom: 30px; border: 4px solid #ffffff; box-shadow: 0 10px 20px rgba(0,0,0,0.15); transform: rotate(15deg);" />

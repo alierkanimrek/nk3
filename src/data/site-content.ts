@@ -20,7 +20,7 @@ const siteContent: SiteContent = {
         navText: 'Şifa almak istediğiniz durumu ve iletişim bilgilerinizi yazarsanız, size dönüş yapacağım.',
             hero: {
         title: 'Pranik Şifa Danışmanlığı',
-        text: 'Tıp doktorları fiziksel beden üzerine, psikoloji uzmanları ise duygu ve düşünceler üzerine çalışırlar. Ancak yaşam ve varlığın farklı katmanları ve bağlantıları vardır, daha hızlı iyileşme için modern tıp uygulamaları ile birlikte diğer katmanlarda da çalışmak gerekir.',
+        text: 'Eterik bedende yapılan bu çalışma fiziki bedenin kendini iyileştirme gücünü destekler, böylece tıbbi tedavilerden daha hızlı sonuç alınabilir. Fiziki temas, ilaç veya alet kullanılmaz. Uzaktan veya yüzyüze seans aynı ölçüde etkilidir.',
         avatar: {
             src: heroAvatar,
             alt: 'Nuray Kaya'
@@ -38,7 +38,7 @@ const siteContent: SiteContent = {
         navText: 'İletişim bilgilerinizi yazarsanız, size dönüş yapacağım.',
         hero: {
             title: 'Pranik Yüz Germe ve Vücut Şekillendirme Danışmanlığı',
-            text: 'Cerrahi müdahaleler veya kozmetik ürünler kullanmadan, sadece enerji çalışmasıyla daha genç ve sağlıklı bir görünüm elde etmek mümkündür.',
+            text: 'Enerji bedenindeki tıkanıklıkları temizleyip hücreleri taze enerjiyle besleyen bu çalışma, cildin ve dokuların doğal kolajen üretimini tetikler. Ameliyatsız, iğnesiz ve kimyasalsız bir gençleşme ve sıkılaşma sürecidir.',
         avatar: {
             src: heroAvatar,
             alt: 'Nuray Kaya'
@@ -57,7 +57,7 @@ const siteContent: SiteContent = {
         navText: 'Yorumlanmasını istediğiniz durumu ve iletişim bilgilerinizi yazarsanız, size dönüş yapacağım.',
             hero: {
         title: 'Numeroloji Danışmanlığı',
-        text: 'Yaşamda veya ilişkilerde neden olduğuna anlam veremediğiniz oluşum, süreç, yönelim, başlangıç veya bitişleri anlamak, tekrar eden konuları çözümlemek, geçmiş ve geleceğe yüksek bir farkındalık ile bakabilmek için size özel sayı sembolleriniz yorumlanabilir.',
+        text: 'Doğum tarihi ve isim analiziyle yaşamın gizli örüntüleri okunur. Tekrar eden konuları çözümlemek, kişisel potansiyeli keşfetmek ve geçmiş-geleceğe yüksek bir farkındalıkla bakabilmek için size özel sayı sembollerini yorumluyorum. Aile danışmanlığı ve pranik şifa teknikleriyle çözüme ulaşıyoruz.',
         avatar: {
             src: heroAvatar,
             alt: 'Nuray Kaya'
@@ -115,7 +115,7 @@ const siteContent: SiteContent = {
         navText: 'Dünya Pranik Şifa Vakfı tarafından düzenlenen eğitimlere göz atın.',
             hero: {
         title: 'Pranik Şifa Eğitimi',
-        text: "Aura ve yaşam enerjisinin temellerini anlamak için Master Choa Kok Sui'nin 30 yıllık araştırma ve uygulamalarının sonuçlarını deneyimleyeceğiniz Dünya Pranik Şifa Vakfı'nın 2 günlük seminerine katılabilirsiniz.",
+        text: "Temel düzeyden ileri uygulamalara kadar sertifikalı eğitim programları ile kendinizi, ailenizi ve başkalarını destekleyebilecek pratik teknikler öğrenin. Fiziksel temas gerektirmeyen bu sistem herkese öğretilebilir.",
         avatar: {
             src: heroAvatar,
             alt: 'Nuray Kaya'
@@ -133,7 +133,7 @@ const siteContent: SiteContent = {
         navText: 'Her hafta ücretsiz online İkiz Kalpler Meditasyonu yapıyoruz. Katılmak için Instagram\'dan duyuruları takip edin.',
         hero: {
             title: 'İkiz Kalpler Meditasyonu',
-            text: "Kalıcı değişimler içeriden dışarıya doğru gerçekleşir, değişmesi gereken şeyin kendiniz olduğunu kabul ettiğiniz anda her şey dönüşmeye başlar. Bu çalışma bir evi yıkıp yeniden inşa etmeye benzer ve önemli miktarda içsel enerji gerektirir.",
+            text: "Kalp ve taç çakralarını aynı anda aktive eden bu meditasyon, derin bir iç huzur ve sevgi enerjisi yaratır. Düzenli uygulamayla stres azalır, zihin berraklaşır ve manevi farkındalık gelişir. Her hafta ücretsiz online ve yüz yüze meditasyonlar düzenliyorum.",
         avatar: {
             src: heroAvatar,
             alt: 'Nuray Kaya'
@@ -151,7 +151,7 @@ const siteContent: SiteContent = {
         navText: 'Size nasıl yardımcı olabileceğimi öğrenmek için iletişime geçin.',
         hero: {
             title: 'Aile Danışmanlığı',
-            text: 'Başarılı bir danışmanlık, ilişkilerdeki karmaşıklığı anlaşılır hale getirir ve çözümsüz gibi görünen sorunların nasıl sorun olmaktan çıkabileceğini gösterir',
+            text: 'Aile bireylerinin birbirleriyle olan ilişkilerindeki örüntüleri ve çatışma noktalarını güvenli bir ortamda ele alır. Hem bireysel hem de aile olarak katılım mümkündür. Temel numerolojik analizler ve ileri pranik şifa teknikleriyle destekleyerek çok yönlü bir çözüm sunuyorum.',
             avatar: {
                 src: heroAvatar,
                 alt: 'Nuray Kaya'

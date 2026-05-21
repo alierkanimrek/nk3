@@ -13,10 +13,9 @@ export const iframes: Record<string, Iframe> = {
     PranikSifaDanismanligi1: { src: 'JPsRIwVznnQ?si=nmoEU_K2CNzYNWv4', category: Category.PranikSifaDanismanligi, allowRandom: true },
     PranikSifaDanismanligi2: { src: '2rQmVXVhSvA?si=hekIYEPfgsGIQmMd', category: Category.PranikSifaDanismanligi, allowRandom: true },
     PranikSifaDanismanligi3: { src: 'R2J-OU2s2oI?si=cOpJwGnCnU6B_Et6', category: Category.PranikSifaDanismanligi, allowRandom: true },
-    PranikSifaDanismanligi4: { src: '9n8sXo2l7jA?si=5e1mNqj6a9u8Zt0b', category: Category.PranikSifaDanismanligi, allowRandom: true },
-    PranikSifaDanismanligi5: { src: 'x01m9fwtEi4?si=WTkF26lZdHtiAzaW', category: Category.PranikSifaDanismanligi, allowRandom: true },
-    PranikSifaDanismanligi6: { src: 'txi_298ZK84?si=3a72aXwIfpZZRsLg', category: Category.PranikSifaDanismanligi, allowRandom: true },
-    PranikSifaDanismanligi7: { src: 'LaPecPUIyfg?si=7XQ5e5yu8U5OBx-N', category: Category.PranikSifaDanismanligi, allowRandom: true },
+    PranikSifaDanismanligi4: { src: 'x01m9fwtEi4?si=WTkF26lZdHtiAzaW', category: Category.PranikSifaDanismanligi, allowRandom: true },
+    PranikSifaDanismanligi5: { src: 'txi_298ZK84?si=3a72aXwIfpZZRsLg', category: Category.PranikSifaDanismanligi, allowRandom: true },
+    PranikSifaDanismanligi6: { src: 'LaPecPUIyfg?si=7XQ5e5yu8U5OBx-N', category: Category.PranikSifaDanismanligi, allowRandom: true },
 
     
     PranikYuzGermeVucutSekillendirme1: { src: 'c6RwDXRwbQ8?si=cyjvm7XaSXRV1aRa', category: Category.PranikYuzGermeVucutSekillendirme, allowRandom: true },
@@ -33,9 +32,8 @@ export const iframes: Record<string, Iframe> = {
     
     AileDanismanligi1: { src: '-AG9Z5wqJak?si=OOnCFgn1kfNk2o0y', category: Category.AileDanismanligi, allowRandom: true },
     AileDanismanligi2: { src: 'Kiaib25JRQY?si=HL1o_rI1cWFzaeUS', category: Category.AileDanismanligi, allowRandom: true },
-    AileDanismanligi3: { src: '9n8sXo2l7jA?si=5e1mNqj6a9u8Zt0b', category: Category.AileDanismanligi, allowRandom: true },
-    AileDanismanligi4: { src: 'oJuQHHwoJGM?si=0isPazyPI_WDxv1v', category: Category.AileDanismanligi, allowRandom: true },
-    AileDanismanligi5: { src: 'FLq6bhcDWBI?si=E4dj0tQtVEyjRWD7', category: Category.AileDanismanligi, allowRandom: true },
+    AileDanismanligi3: { src: 'oJuQHHwoJGM?si=0isPazyPI_WDxv1v', category: Category.AileDanismanligi, allowRandom: true },
+    AileDanismanligi4: { src: 'FLq6bhcDWBI?si=E4dj0tQtVEyjRWD7', category: Category.AileDanismanligi, allowRandom: true },
 
     
 };

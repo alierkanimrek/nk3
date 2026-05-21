@@ -18,7 +18,7 @@ Vücuttaki ve yüzdeki yaşlanma etkilerini enerji bedenini temizleyip şifaland
 - Doğal Lifting: Sarkan yanak ve çene hattı (jawline) dokularını enerjik olarak yukarı taşır.
 - Cilt Canlandırma: Yüzdeki renk eşitsizliklerini gidererek cilde doğal bir parlaklık ve tazelik kazandırır.
 - Vücut Şekillendirme Uygulaması Bölgesel Sıkılaşma: Karın, kol ve bacak gibi sarkmaya meyilli bölgelerdeki gevşek enerjiyi toparlar.
-- Enerjik Detoks: Hücre bazında biriken toksik enerjilerin atılmasını destekleyerek portakal kabuğu (selülit) görünümünü azaltmaya yardımcı olur.
-- AvantajlarıSıfır İnvazivlik: Ameliyat, kesi, iğne, dolgu maddesi veya kimyasal ürün içermez.
+- Enerji ile Detoks: Hücre bazında biriken toksik enerjilerin atılmasını destekleyerek portakal kabuğu (selülit) görünümünü azaltmaya yardımcı olur.
+- Sıfır İnvazivlik: Ameliyat, kesi, iğne, dolgu maddesi veya kimyasal ürün içermez.
 - Ağrısız Süreç: İşlem sırasında acı hissedilmez ve iyileşme süresi (iyileşme dönemi) yoktur.
 - Bütünsel Yaklaşım: Sadece dış görünüşü değil, kişinin stres seviyesini azaltarak içsel huzurunu da destekler.

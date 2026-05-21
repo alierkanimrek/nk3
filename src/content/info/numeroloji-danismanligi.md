@@ -21,4 +21,5 @@ Numeroloji çalışması sadece adınız ve doğum tarihinizden çıkarılan say
 Talep ettiğiniz belirli bir konu veya ilişkinin analizi seans öncesi hazırlanır, ancak yorumlanması uzaktan bağlantı yoluyla yapılacak seansta gerçekleştirilir.
 
 ### Numhero
-Numeroloji kodlarınızı hesaplamak isterseniz [Numhero](https://numhero.nuraykaya.com) aracını kullanabilirsiniz.
+
+Temel Numeroloji kodlarınızı hesaplamak isterseniz [Numhero](https://numhero.nuraykaya.com) aracını kullanabilirsiniz.

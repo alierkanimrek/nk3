@@ -26,12 +26,17 @@ const siteConfig: SiteConfig = {
             href: siteContent.pranikSifaDanismanligi.url
         }, 
         {
-            text: siteContent.pranikYuzGermeVucutSekillendirme.title,
-            href: siteContent.pranikYuzGermeVucutSekillendirme.url
+            text: siteContent.aileDanismanligi.title,
+            href: siteContent.aileDanismanligi.url
         },
         {
             text: siteContent.numerolojiDanismanligi.title,
             href: siteContent.numerolojiDanismanligi.url
+        },
+
+        {
+            text: siteContent.pranikYuzGermeVucutSekillendirme.title,
+            href: siteContent.pranikYuzGermeVucutSekillendirme.url
         },
         {
             text: siteContent.pranikSifaEgitimi.title,
@@ -42,14 +47,10 @@ const siteConfig: SiteConfig = {
             href: siteContent.ikizKalplerMeditasyonu.url
         },
         {
-            text: siteContent.aileDanismanligi.title,
-            href: siteContent.aileDanismanligi.url
-        },
-        {
             text: 'Yazılar',
             href: '/yazilar'
         },
-                {
+        {
             text: 'Numeroloji Hesaplaması',
             href: 'https://numhero.nuraykaya.com'
         },
