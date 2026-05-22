@@ -1,5 +1,7 @@
 ---
+import siteconfig from '../data/site-config';
 import type { Iframe } from '../types';
+import Icon from './Icon.astro';
 
 type Props = {
     class?: string;
@@ -24,4 +26,17 @@ const { class: className, frame } = Astro.props;
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen></iframe>
+
+    <a
+        href={siteconfig.socialLinks?.find((link) => link.icon === 'youtube')?.href}
+        class="inline-flex items-center gap-1 text-sm text-blue-600 hover:underline"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <Icon
+            icon={siteconfig.socialLinks?.find((link) => link.icon === 'youtube')?.icon || 'youtube'}
+            class="float=left h-5 w-5 overflow-visible fill-current"
+        />
+        Kanalımdan daha çok içerik izleyebilirsiniz!
+    </a>
 </div>
