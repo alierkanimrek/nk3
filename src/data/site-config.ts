@@ -106,7 +106,7 @@ const siteConfig: SiteConfig = {
         },
         {
             text: 'Youtube',
-            href: 'https://www.youtube.com/channel/UCqeqZ7VC4TXdDSaHB9gh2ow',
+            href: 'https://www.youtube.com/@NurayKAYA1',
             icon: 'youtube'
         },
         {
