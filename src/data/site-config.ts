@@ -55,6 +55,11 @@ const siteConfig: SiteConfig = {
             href: 'https://numhero.nuraykaya.com'
         },
         {
+            text: 'Mağaza',
+            href: 'https://magaza.nuraykaya.com'
+        },
+
+        {
             text: 'Hakkımda',
             href: '/hakkimda'
         },
@@ -62,6 +67,7 @@ const siteConfig: SiteConfig = {
             text: 'İletişim',
             href: '/iletisim'
         }
+
     ],
     secondaryNavLinks: [
         {
@@ -74,7 +80,12 @@ const siteConfig: SiteConfig = {
         },        {
             text: 'Kullanım Şartları',
             href: '/terms'
-        }
+        },
+        {
+            text: 'Mağaza',
+            href: 'https://magaza.nuraykaya.com'
+        },
+
 
     ],
     socialLinks: [
@@ -102,10 +113,17 @@ const siteConfig: SiteConfig = {
             text: 'Mail',
             href: 'mailto:nuraykaya1@gmail.com',
             icon: 'mail'
-        },        {
+        },        
+        {
             text: 'Konum',
             href: 'https://maps.app.goo.gl/wV3YE6R7yNsLnyQL9',
             icon: 'location'
+        }
+        ,        
+        {
+            text: 'Magaza',
+            href: 'https://magaza.nuraykaya.com',
+            icon: 'shoppingCart'
         }
 
 

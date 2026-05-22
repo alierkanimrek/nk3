@@ -26,7 +26,7 @@ export enum Category {
 }
 
 export type SocialLink = Link & {
-    icon: 'bluesky' | 'codepen' | 'dev' | 'facebook' | 'github' | 'instagram' | 'linkedin' | 'mastodon' | 'medium' | 'reddit' | 'x' | 'youtube' | 'whatsapp' | 'mail' | 'location';
+    icon: 'bluesky' | 'codepen' | 'dev' | 'facebook' | 'github' | 'instagram' | 'linkedin' | 'mastodon' | 'medium' | 'reddit' | 'x' | 'youtube' | 'whatsapp' | 'mail' | 'location' | 'shoppingCart';
 };
 
 export type Hero = {
