@@ -20,13 +20,10 @@ export default defineConfig({
     provider: fontProviders.fontsource(),
     name: "Manrope",
     cssVariable: "--font-manrope",
-  }],
-    experimental: {    fonts: [
-    {
+  },    {
       provider: fontProviders.fontsource(),
       name: "Ephesis",
       cssVariable: "--font-ephesis",
     }
-  ]
-},
+],
 });
