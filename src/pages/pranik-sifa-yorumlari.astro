@@ -20,7 +20,7 @@ const { title, desc, navTitle, navText } = siteContent.pranikSifaYorumlari;
     <main class="grow px-4 py-12 sm:px-8 sm:py-16">
         <h1 class="sr-only">Blog</h1>
         <div class="mx-auto max-w-3xl xl:max-w-6xl">
-            {pranikYorum.reverse().map((post) => <PranikYorum yorum={post} />)}
+            {pranikYorum.map((post) => <PranikYorum yorum={post} />)}
         </div>
     </main>
     <section class="grow px-4 py-12 sm:px-8 sm:py-8">

@@ -190,11 +190,13 @@ let pranikBlog : PranikBlog[] = [];
 
 try {
     pranikYorum = JSON.parse(gunzipSync(new Uint8Array(readFileSync(join(process.cwd(), 'public/pranik_yorum.bin').replace(/\/$/, '')))).toString());
+    pranikYorum = pranikYorum.reverse();
 } catch (error) {    
     console.error('Pranik yorumları yüklenirken hata oluştu:', error);
 }
 try {
     numerolojiYorum = JSON.parse(gunzipSync(new Uint8Array(readFileSync(join(process.cwd(), 'public/num_yorum.bin').replace(/\/$/, '')))).toString());
+    numerolojiYorum = numerolojiYorum.reverse();
 } catch (error) {
     console.error('Numeroloji yorumları yüklenirken hata oluştu:', error);
 }

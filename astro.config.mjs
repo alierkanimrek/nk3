@@ -8,6 +8,10 @@ import { defineConfig, fontProviders } from 'astro/config';
 export default defineConfig({
     site: 'https://alierkanimrek.github.io',
     base: '',
+    redirects: {
+    '/kisisel-gelisim': '/ikiz-kalpler-meditasyonu',
+    //'/eski-blog/[slug]': '/blog/[slug]'
+    },
     vite: {
         plugins: [tailwindcss()]
     },
@@ -20,7 +24,8 @@ export default defineConfig({
     provider: fontProviders.fontsource(),
     name: "Manrope",
     cssVariable: "--font-manrope",
-  },    {
+    },    
+    {
       provider: fontProviders.fontsource(),
       name: "Ephesis",
       cssVariable: "--font-ephesis",
