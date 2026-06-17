@@ -16,6 +16,9 @@ etkinlikleri ve canlı yayınları takip etmek veya kısa bir merhaba için hari
 **Whatsapp topluluğumuza**
 özel paylaşımlar veya etkinlik ayrıntıları için katılabilirsiniz. [Whatsapp](https://chat.whatsapp.com/HwfCyamphor4fF68jtPfOH)
 
+Danışmanlık ve eğitimler için [+905333637340](tel:+905333637340) numaradan ulaşabilirsiniz.
+
+
 ## Nuray Kaya Farkındalık Merkezi ##
 
 2016 Yılından itibaren kendi merkezimde seanslar, eğitimler ve meditasyonlar düzenliyorum.
