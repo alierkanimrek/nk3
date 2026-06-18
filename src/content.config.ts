@@ -33,6 +33,29 @@ const blog = defineCollection({
         })
 });
 
+const magaza = defineCollection({
+    loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/magaza' }),
+    schema: ({ image }) =>
+        z.object({
+            title: z.string(),
+            excerpt: z.string().optional(),
+            publishDate: z.coerce.date(),
+            updatedDate: z.coerce.date().optional(),
+            payment: z.string(),
+            price: z.string().optional(),
+            category: z.number().optional(),
+            active: z.boolean().default(true),
+            featureImage: imageSchema(image)
+                .extend({
+                    caption: z.string().optional()
+                })
+                .optional(),
+            isFeatured: z.boolean().default(false),
+            seo: seoSchema(image).optional(),
+        })
+});
+
+
 const pages = defineCollection({
     loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/pages' }),
     schema: ({ image }) =>
@@ -54,4 +77,4 @@ const info = defineCollection({
   }),
 });
 
-export const collections = { blog, pages, info };
+export const collections = { blog, pages, info, magaza };

@@ -24,6 +24,10 @@ const siteConfig: SiteConfig = {
         {
             text: siteContent.pranikSifaDanismanligi.title,
             href: siteContent.pranikSifaDanismanligi.url
+        },
+        {
+            text: siteContent.pranikSifaEgitimi.title,
+            href: siteContent.pranikSifaEgitimi.url
         }, 
         {
             text: siteContent.aileDanismanligi.title,
@@ -33,32 +37,26 @@ const siteConfig: SiteConfig = {
             text: siteContent.numerolojiDanismanligi.title,
             href: siteContent.numerolojiDanismanligi.url
         },
-
         {
             text: siteContent.pranikYuzGermeVucutSekillendirme.title,
             href: siteContent.pranikYuzGermeVucutSekillendirme.url
-        },
-        {
-            text: siteContent.pranikSifaEgitimi.title,
-            href: siteContent.pranikSifaEgitimi.url
-        },
+        },        
         {
             text: siteContent.ikizKalplerMeditasyonu.title,
             href: siteContent.ikizKalplerMeditasyonu.url
         },
         {
-            text: 'Yazılar',
-            href: '/yazilar'
+            text: 'Hizmetlerim ve ürünlerim',
+            href: '/magaza'
         },
         {
             text: 'Numeroloji Hesaplaması',
             href: 'https://numhero.nuraykaya.com'
         },
         {
-            text: 'Mağaza',
-            href: 'https://magaza.nuraykaya.com'
+            text: 'Yazılar',
+            href: '/yazilar'
         },
-
         {
             text: 'Hakkımda',
             href: '/hakkimda'
@@ -82,8 +80,8 @@ const siteConfig: SiteConfig = {
             href: '/terms'
         },
         {
-            text: 'Mağaza',
-            href: 'https://magaza.nuraykaya.com'
+            text: 'Hizmetlerim ve ürünlerim',
+            href: '/magaza'
         },
 
 
@@ -121,8 +119,8 @@ const siteConfig: SiteConfig = {
         }
         ,        
         {
-            text: 'Magaza',
-            href: 'https://magaza.nuraykaya.com',
+            text: 'Hizmetlerim ve ürünlerim',
+            href: '/magaza',
             icon: 'shoppingCart'
         }
 

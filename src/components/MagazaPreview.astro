@@ -1,0 +1,19 @@
+---
+import { type CollectionEntry } from 'astro:content';
+import CustomImage from './CustomImage.astro';
+
+const { item } = Astro.props as { item: CollectionEntry<'magaza'> };
+const { title, publishDate, updatedDate, featureImage, excerpt, isFeatured } = item.data;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<div class="yorum-kart">
+    <a href={`${base}/magaza/${item.id}/`}>
+        <div class="yorum-header" style="display:block;">
+            {(<CustomImage src={featureImage?.src || ''} class="w-full rounded-md" />)}
+            <div class="yorum-meta mt-3">
+                <div class="yorum-isim" style="text-align: center;">{title}</div>
+            </div>
+        </div>
+    </a>
+</div>

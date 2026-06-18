@@ -106,6 +106,7 @@ export type SiteContent = {
     ikizKalplerMeditasyonu: PageContent;
     pranikSifaEgitimi: PageContent;
     yazilar: PageContent;
+    magaza: PageContent;
 };
 
 

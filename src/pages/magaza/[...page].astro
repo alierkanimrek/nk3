@@ -1,0 +1,43 @@
+---
+import type { GetStaticPathsOptions, Page } from 'astro';
+import { type CollectionEntry, getCollection } from 'astro:content';
+import Header from '../../components/Header.astro';
+import MagazaPreview from '../../components/MagazaPreview.astro';
+import PageHero from '../../components/PageHero.astro';
+import siteContent from '../../data/site-content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { sortPostsByDateDesc } from '../../utils/post-utils';
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+    const posts = (await getCollection('magaza')).sort(sortPostsByDateDesc);
+    return paginate(posts, { pageSize: 100 });
+}
+
+const { page } = Astro.props as { page: Page<CollectionEntry<'magaza'>> };
+const items = page.data;
+---
+
+<BaseLayout title={siteContent.magaza.title} description={siteContent.magaza.desc}>
+    <div class="relative border-b border-slate-100 bg-slate-50" slot="header">
+        <Header class="relative" />
+        <PageHero {...siteContent.magaza.hero} />
+    </div>
+
+    <section class="grow px-4 py-12 sm:px-8 sm:py-8">
+        <div class="px-4 sm:px-8">
+            <div class="mx-auto max-w-3xl xl:max-w-6xl">
+                <div class="yorumlar-grid">
+                    {
+                        items?.length > 0 && (
+                            <>
+                                {items.map((item) => (
+                                    <MagazaPreview item={item} />
+                                ))}
+                            </>
+                        )
+                    }
+                </div>
+            </div>
+        </div>
+    </section></BaseLayout
+>

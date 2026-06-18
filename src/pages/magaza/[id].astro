@@ -1,0 +1,144 @@
+---
+import { type CollectionEntry, getCollection, render } from 'astro:content';
+import CustomImage from '../../components/CustomImage.astro';
+import NumerolojiYorumPreviewCard from '../../components/NumerolojiYorumPreviewCard.astro';
+import PranikYorumPreviewCard from '../../components/PranikYorumPreviewCard.astro';
+import Subscribe from '../../components/Subscribe.astro';
+import siteContent, { numerolojiYorum, pranikYorum } from '../../data/site-content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import type { NumerolojiYorum, PranikYorum } from '../../types';
+import { Category } from '../../types';
+import { sortPostsByDateDesc } from '../../utils/post-utils';
+import { getRandomItems } from '../../utils/post-utils.ts';
+
+
+const { navTitle, navText } = siteContent.magaza;
+
+export async function getStaticPaths() {
+    const posts = (await getCollection('magaza')).sort(sortPostsByDateDesc);
+    const postCount = posts.length;
+    return posts.map((post, index) => ({
+        params: { id: post.id },
+        props: {
+            post,
+            prevPost: index + 1 !== postCount ? posts[index + 1] : null,
+            nextPost: index !== 0 ? posts[index - 1] : null
+        }
+    }));
+}
+
+const selectedPranikYorum: PranikYorum[] = getRandomItems(pranikYorum);
+const selectedNumerolojiYorum: NumerolojiYorum[] = getRandomItems(numerolojiYorum);
+
+const { href } = Astro.url;
+const { post, prevPost, nextPost } = Astro.props as {
+    post: CollectionEntry<'magaza'>;
+    prevPost: CollectionEntry<'magaza'>;
+    nextPost: CollectionEntry<'magaza'>;
+};
+const { title, publishDate, updatedDate, featureImage, excerpt, isFeatured, seo, payment, price, category, active } = post.data;
+const { Content } = await render(post);
+---
+
+<BaseLayout title={seo?.title ?? title} description={seo?.description ?? excerpt} image={seo?.image ?? featureImage} pageType="article">
+    <main class="grow px-4 py-12 sm:px-8 sm:py-16">
+        <div class="flex flex-col gap-20">
+            {
+                <div class={`flex flex-col sm:flex-row items-start gap-10 ${2 % 2 === 1 ? 'sm:flex-row-reverse' : ''}`}>
+
+                    <!-- Görsel -->
+                    <div class="w-full sm:w-2/5 ">
+                        <CustomImage
+                            src={featureImage?.src || ''}
+                            alt={featureImage?.alt || ''}
+                            class="w-full rounded-xl "
+                            loading="lazy"
+                        />
+                    </div>
+
+                    <!-- Metin -->
+                    <div class="flex-1 pt-1">
+
+                        <!-- Soru -->
+                        <p class="text-3xl font-bold text-slate-900 sm:text-4xl md:text-5xl pb-8">
+                            
+                            {title}
+                        </p>
+                        
+                        {
+                        active === true && (
+                        <!-- Fiyat -->
+                        <p class="text-xl inline-flex w-full text-primary  items-center justify-center gap-1.5 px-8 py-2.5 font-bold sm:w-auto mb-8">{price}</p>
+                        )}   
+
+                        {
+                        active === true ? (
+
+                        <!-- Ödeme Yap -->
+                        <a
+                            href={payment}
+                            class="inline-flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-full bg-primary px-8 py-2.5 font-semibold text-white transition duration-300 hover:bg-green-600 sm:w-auto mb-8"
+                        >
+                            Ödeme Yap
+                        </a>
+                        ) : (
+                            <p class="text-xl inline-flex w-full text-gray-500  items-center justify-center gap-1.5 px-8 py-2.5 font-bold sm:w-auto mb-8">Bu ürün şu anda aktif değil</p>
+                        )}
+                           
+                        
+                       
+                        <!-- Özet -->
+                        <p class="mb-4 text-gray-400 space-y-2">
+                            {excerpt}
+                        </p>
+                        
+                        <div class="h-px flex-1 bg-slate-200 mb-8"></div>
+
+                        <!-- Açıklama -->
+                        <div class="prose prose-slate sm:prose-lg max-w-none">
+                        <Content />
+                        </div>
+
+
+                    </div>
+
+                </div>
+            }
+        </div>
+        <section class="grow px-4 py-12 sm:px-8 sm:py-8">
+        <Subscribe title={navTitle} text={navText} instagram={true} email={true} />
+        </section>
+        
+        {
+            category === Category.PranikSifaDanismanligi && (
+            <section class="grow bg-slate-50 px-4 py-12 sm:px-8 sm:py-8">
+            <div class="px-4 sm:px-8">
+                {
+                    selectedPranikYorum?.length > 0 && (
+                        <>
+                            <PranikYorumPreviewCard yorumlar={selectedPranikYorum} />{' '}
+                        </>
+                    )
+                }
+            </div>
+        </section>
+        )}
+
+        {
+            category === Category.NumerolojiDanismanligi && (
+            <section class="grow bg-slate-50 px-4 py-12 sm:px-8 sm:py-8">
+            <div class="px-4 sm:px-8">
+            {
+                selectedNumerolojiYorum?.length > 0 && (
+                    <>
+                        <NumerolojiYorumPreviewCard yorumlar={selectedNumerolojiYorum} />{' '}
+                    </>
+                )
+            }
+            </div>
+        </section>
+        )}
+
+
+    </main>
+</BaseLayout>

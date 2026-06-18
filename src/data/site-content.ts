@@ -179,6 +179,25 @@ const siteContent: SiteContent = {
                 src: heroBackground
             }
         }
+    },
+    magaza: {
+        url: '/magaza',
+        title: 'Mağaza',
+        desc: 'Hizmetlerim ve ürünlerim',
+        heroTxt: '',
+        navTitle: 'Satın alımlarınız için iletişime geçin',
+        navText: 'Hizmetlerim ve ürünlerim için ödeme yapmadan önce iletişime geçin.',
+        hero: {
+            title: 'Hizmetlerim ve ürünlerim',
+            text: '',
+            avatar: {
+                src: heroAvatar,
+                alt: 'Nuray Kaya'
+            },
+            backgroundImage: {
+                src: heroBackground
+            }
+        }
     }
 
 
