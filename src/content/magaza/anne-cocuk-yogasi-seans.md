@@ -2,7 +2,7 @@
 title: Anne Çocuk Yogası (Seans)
 excerpt: Hizmetlerim ve ürünlerim için ödeme yapmadan önce iletişime geçin.
 publishDate: 'Jun 10 2026'
-active: false
+#active: false
 featureImage:
   src: '../../assets/images/urun-anne-cocuk-yogasi-seans.webp'
   alt: nada yoga
